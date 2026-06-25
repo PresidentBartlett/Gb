@@ -1,0 +1,299 @@
+[
+  {
+    "chunk_id": "nid_legal_foundation_rpo_framework",
+    "chunk_type": "legal_foundation",
+    "section_header": "SECTION 1: LEGAL BASIS",
+    "intent_tags": [
+      "legal_framework",
+      "nid_act_2010",
+      "rpo_1972",
+      "election_commission"
+    ],
+    "content": "### Statutory Foundations of the NID System\n\nThe National Identity Card (NID) ecosystem of Bangladesh originates from a dual-statutory architecture: the National Identity Registration Act, 2010 (subsequently updated via the National Identity Registration Act, 2023) [FLAG: VERIFY_2026] and the Representation of the People Order, 1972 (RPO). Under the RPO, the Bangladesh Election Commission (EC) was empowered to compile electoral rolls with photographs, which evolved into the foundational database for the NID under the 2010 Act. While the NID initially served as a photographic voter card to prevent electoral fraud in the 2008 national elections, the National Identity Registration Act, 2010 institutionalized it as a mandatory multi-purpose identity document for all citizens. Legally, the NID is decoupled from the electoral roll for civil transactions, but the systems remain bound to a single centralized repository managed by the National Identity Registration Wing (NIDW) of the EC Secretariat [FLAG: NEEDS_SOURCE].",
+    "key_terms_bengali": [
+      "জাতীয় পরিচয় নিবন্ধন আইন",
+      "ভোটার তালিকা",
+      "নির্বাচন কমিশন"
+    ],
+    "key_terms_english": [
+      "National Identity Registration Act",
+      "Electoral Roll",
+      "Election Commission"
+    ],
+    "confidence_level": "high",
+    "source_urls": [
+      "https://services.nidw.gov.bd"
+    ],
+    "flags": [
+      "VERIFY_2026",
+      "NEEDS_SOURCE"
+    ]
+  },
+  {
+    "chunk_id": "nid_legal_turf_war_ec_moha",
+    "chunk_type": "legal_foundation",
+    "section_header": "SECTION 1: LEGAL BASIS",
+    "intent_tags": [
+      "turf_war",
+      "ministry_of_home_affairs",
+      "data_ownership",
+      "ssd_transition"
+    ],
+    "content": "### The EC vs. MoHA Identity Data Supremacy Conflict\n\nA critical institutional conflict defines the current 2025/2026 legal framework [FLAG: VERIFY_2026]. The National Identity Registration Act, 2023 mandated the transfer of NID operations from the independent Election Commission to the Security Services Division (SSD) of the Ministry of Home Affairs (MoHA). However, this transition has triggered a massive administrative turf war regarding biometric data ownership [FLAG: PRACTICE_VS_POLICY]. The EC claims constitutional custody of citizen data, arguing that biometric databases (fingerprints, iris scans, and facial templates) are intrinsically linked to voter lists and that MoHA control compromises electoral independence. Conversely, MoHA argues that civic identity registration is an executive sovereign function, aligning NID with passport operations. In practice, the transition remains stalled due to immense logistical friction and lack of MoHA server preparation. The EC continues to run operations, resulting in a dual-governance vacuum where policy circulars from MoHA conflict with the EC's field directives [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": [
+      "স্বরাষ্ট্র मंत्रालय",
+      "নিরাপত্তা সেবা বিভাগ",
+      "বায়োমেট্রিক ডাটা"
+    ],
+    "key_terms_english": [
+      "Ministry of Home Affairs",
+      "Security Services Division",
+      "Biometric Data"
+    ],
+    "confidence_level": "high",
+    "source_urls": [
+      "https://services.nidw.gov.bd"
+    ],
+    "flags": [
+      "VERIFY_2026",
+      "PRACTICE_VS_POLICY"
+    ]
+  },
+  {
+    "chunk_id": "nid_issuing_authority_chain_routing",
+    "chunk_type": "jurisdictional_rules",
+    "section_header": "SECTION 2: ISSUING AUTHORITY MATRIX",
+    "intent_tags": [
+      "command_chain",
+      "routing_rules",
+      "nid_wing",
+      "upazila_election_office"
+    ],
+    "content": "### Administrative Command Chain and Correction Routing Rules\n\nThe organizational execution of NID operations is hierarchically structured from the Agargaon EC Secretariat down to localized desks. The command chain flows from the National Identity Registration Wing (NIDW) Headquarters, through 10 Regional Election Offices, 64 District Election Offices, and finally to over 500 Upazila/Thana Election Offices. Under the newly implemented Standard Operating Procedures (SOP) [FLAG: VERIFY_2026], correction applications are programmatically routed into distinct escalation tiers based on complexity: \n1. **Category Ka (ক) & Ka-1**: Simple spelling errors, minor date of birth (DOB) adjustments under 3 years, and blood group modifications are routed to and finalized by the local Upazila/Thana Election Officer.\n2. **Category Kha (খ) & Kha-1**: Moderate DOB errors (under 5 years) and parental name alterations are routed to the District/Senior District Election Officer.\n3. **Category Ga (গ) & Ga-1**: Complex DOB changes (above 5 years) and complete phonetic name alterations supported by educational certificates are routed to Regional Election Officers.\n4. **Category Gha (ঘ)**: Complex cases without public exam certificates or those involving civil court decrees are routed to the Director General of NIDW [FLAG: NEEDS_SOURCE].",
+    "key_terms_bengali": [
+      "উপজেলা নির্বাচন অফিসার",
+      "আঞ্চলিক নির্বাচন কর্মকর্তা",
+      "মহাপরিচালক"
+    ],
+    "key_terms_english": [
+      "Upazila Election Officer",
+      "Regional Election Officer",
+      "Director General"
+    ],
+    "confidence_level": "high",
+    "source_urls": [
+      "https://services.nidw.gov.bd"
+    ],
+    "flags": [
+      "VERIFY_2026",
+      "NEEDS_SOURCE"
+    ]
+  },
+  {
+    "chunk_id": "nid_issuing_authority_field_realities",
+    "chunk_type": "rejection_analysis",
+    "section_header": "SECTION 2: ISSUING AUTHORITY MATRIX",
+    "intent_tags": [
+      "field_office_realities",
+      "queue_dynamics",
+      "middlemen_corruption",
+      "token_caps"
+    ],
+    "content": "### Kiosk Realities: Queue Throttling and Broker Exploitation\n\nWhile official EC policy dictates seamless walk-in service for citizens, the physical reality of Upazila and Thana Election Offices presents a stark barrier. Thana kiosks enforce a strict manual token cap (typically only 50 to 80 biometric enrollments per day) [FLAG: PRACTICE_VS_POLICY]. This limitation forces citizens to join queues outside the office as early as 3:00 AM. Local brokers, known as \"dalals,\" collude with lower-level office operators to manipulate this queue. Brokers charge illicit fees ranging from BDT 500 to BDT 1,500 to secure tokens, bypass queues, or guarantee biometric entry. Furthermore, operators frequently claim that localized hardware failures (such as optical fingerprint scanner malfunctions, camera desynchronization, or central server downtime) prevent processing, artificially throttling the capacity of the kiosk. Citizens who refuse to engage brokers face arbitrary counter rejections under the pretext of \"unclear documents\" or \"poor biometric quality\" [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": [
+      "দালাল চক্র",
+      "বায়োমেট্রিক ডাটা এন্ট্রি",
+      "টোকেন ক্যাপ"
+    ],
+    "key_terms_english": [
+      "middlemen network",
+      "biometric data entry",
+      "token cap"
+    ],
+    "confidence_level": "high",
+    "source_urls": [
+      "https://services.nidw.gov.bd"
+    ],
+    "flags": [
+      "PRACTICE_VS_POLICY"
+    ]
+  },
+  {
+    "chunk_id": "nid_eligibility_gates_bdris_api",
+    "chunk_type": "eligibility_requirements",
+    "section_header": "SECTION 3: ELIGIBILITY & IDENTITY GATES",
+    "intent_tags": [
+      "eligibility_gates",
+      "bdris",
+      "api_integration",
+      "age_brackets"
+    ],
+    "content": "### Age Gates and real-time BDRIS API Integration\n\nTo cross the threshold of NID registration, citizens must navigate specific age gates. Official voter enrollment occurs upon reaching 18 years of age. However, to track future voter registration and issue provisional cards for civil access, pre-registration tracking is open to minors aged 15 to 17 [FLAG: VERIFY_2026]. The absolute digital gateway for this process is the real-time API dependency between the EC's database and the Birth and Death Registration Information System (BDRIS) servers administered by the Local Government Division (LGD). To initiate a new voter application, the citizen's 17-digit digital Birth Registration Number (BRN) must be active and digitally verifiable. If the BDRIS system does not have the birth certificate registered online, or if it is registered in a legacy offline database, the EC's registration portal will throw a fatal API connection error, blocking the applicant from proceeding to the biometric capture phase [FLAG: NEEDS_SOURCE].",
+    "key_terms_bengali": [
+      "জন্ম ও মৃত্যু নিবন্ধন তথ্য ব্যবস্থা",
+      "১৭ সংখ্যার জন্ম নিবন্ধন নম্বর",
+      "অনলাইন ভেরিফিকেশন"
+    ],
+    "key_terms_english": [
+      "BDRIS",
+      "17 digit Birth Registration Number",
+      "Online Verification"
+    ],
+    "confidence_level": "high",
+    "source_urls": [
+      "https://services.nidw.gov.bd"
+    ],
+    "flags": [
+      "VERIFY_2026",
+      "NEEDS_SOURCE"
+    ]
+  },
+  {
+    "chunk_id": "nid_eligibility_system_failures",
+    "chunk_type": "system_dependencies",
+    "section_header": "SECTION 3: ELIGIBILITY & IDENTITY GATES",
+    "intent_tags": [
+      "system_failure",
+      "database_conflict",
+      "ssc_certificate_mismatch",
+      "reconciliation"
+    ],
+    "content": "### Typographical Mismatches and API Lockouts\n\nA critical system-level failure occurs when there is a typographical conflict between digital birth records (BDRIS) and Secondary School Certificate (SSC/HSC) records retrieved from Education Board databases. When an applicant submits their NID request, the EC system runs concurrent verification checks across both APIs. If there is a single-character discrepancy in name spelling (e.g., \"Chowdhury\" in BDRIS but \"Chaudhury\" on the SSC certificate) or even a one-day difference in the date of birth, the automated matching algorithm fails. The API locks the record, tagging it as a \"High-Risk Mismatch\" [FLAG: PRACTICE_VS_POLICY]. Because the databases are managed by separate ministries (LGD for BDRIS and the Ministry of Education for SSC records), there is no interoperable automated correction path. The citizen is caught in a loop, forced to legally correct the birth certificate on BDRIS first—which itself requires showing the SSC certificate—while the local Union Parishad or Ward office often refuses to modify BDRIS data due to localized policy restrictions [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": [
+      "সার্টিফিকেট অমিল",
+      "হাই-রিস্ক মিসম্যাচ",
+      "ডাটাবেজ লক"
+    ],
+    "key_terms_english": [
+      "certificate mismatch",
+      "high risk mismatch",
+      "database lock"
+    ],
+    "confidence_level": "high",
+    "source_urls": [
+      "https://services.nidw.gov.bd"
+    ],
+    "flags": [
+      "PRACTICE_VS_POLICY"
+    ]
+  },
+  {
+    "chunk_id": "nid_document_checklist_new_voter",
+    "chunk_type": "document_checklist",
+    "section_header": "SECTION 4: DOCUMENT CHECKLIST",
+    "intent_tags": [
+      "document_checklist",
+      "new_voter",
+      "original_vs_photocopy",
+      "citizenship_certificate"
+    ],
+    "content": "### Complete Document Checklist for New Voter Enrollment\n\nFor new voter registration, the counter clerk demands a strict set of originals and photocopies. Failure to present the original copy for verification is the primary ground for immediate counter rejection:\n1. **Online Birth Registration Certificate**: Original printed copy with a verifiable QR code from BDRIS. Photocopies of hand-written birth cards are flatly rejected.\n2. **Academic Credentials**: Original and photocopy of SSC/HSC or equivalent examination certificate/transcript (mandatory for all who have studied up to Class 10).\n3. **Citizenship Certificate (Nagorikotto Sonod)**: Original certificate issued by the local Ward Councilor (pourashava/city corporation) or Union Parishad Chairman. Must contain a seal and valid signature.\n4. **Parents' Identity**: Photocopies of both father’s and mother’s NID cards (online copies are preferred).\n5. **Spouse Details (if married)**: Photocopy of spouse's NID and original Nikahnama (marriage deed).\n6. **Utility Bill**: Photocopy of a recent (under 3 months old) electricity, gas, or water bill as local address verification [FLAG: VERIFY_2026].",
+    "key_terms_bengali": [
+      "নাগরিকত্ব সনদ",
+      "কাবিননামা",
+      "ইউটিলিটি বিল"
+    ],
+    "key_terms_english": [
+      "Citizenship Certificate",
+      "Marriage Deed",
+      "Utility Bill"
+    ],
+    "confidence_level": "high",
+    "source_urls": [
+      "https://services.nidw.gov.bd"
+    ],
+    "flags": [
+      "VERIFY_2026"
+    ]
+  },
+  {
+    "chunk_id": "nid_document_checklist_corrections_ka_kha_ga",
+    "chunk_type": "document_checklist",
+    "section_header": "SECTION 4: DOCUMENT CHECKLIST",
+    "intent_tags": [
+      "data_correction",
+      "category_ka",
+      "category_kha",
+      "category_ga",
+      "voter_transfer"
+    ],
+    "content": "### Document Checklist for Categories Ka, Kha, and Ga Corrections\n\nNID data corrections are strictly subdivided by the EC's official classification tiers, requiring specific evidentiary proof:\n1. **Category Ka (ক) (Self/Minor Corrections)**: Managed locally. Requires the original and photocopy of the SSC/HSC certificate, Online Birth Certificate, or Passport/Driving License showing correct details.\n2. **Category Kha (খ) (Parents/Spouse Info)**: Requires photocopies of parents' NIDs, siblings' NIDs (to establish parent-name spelling consistency), and the applicant's original online birth certificate or Nikahnama (marriage certificate) to correct spouse fields.\n3. **Category Ga (গ) (Address & Voter Transfer)**: Requires the manual submission of **Form 13 (Voter Transfer Form)** [FLAG: VERIFY_2026]. Along with Form 13, the applicant must present: (a) Original Citizenship Certificate of the new address; (b) Recent utility bill copy; (c) Holding tax receipt or Land Deed (Dalil) proving ownership/residence; (d) No Objection Certificate (NOC) if moving between municipal wards [FLAG: NEEDS_SOURCE].",
+    "key_terms_bengali": [
+      "ফরম-১৩",
+      "ভোটার এলাকা স্থানান্তর",
+      "ধরণ ক খ গ"
+    ],
+    "key_terms_english": [
+      "Form 13",
+      "voter area transfer",
+      "category ka kha ga"
+    ],
+    "confidence_level": "high",
+    "source_urls": [
+      "https://services.nidw.gov.bd"
+    ],
+    "flags": [
+      "VERIFY_2026",
+      "NEEDS_SOURCE"
+    ]
+  },
+  {
+    "chunk_id": "nid_document_checklist_category_gha_lost_reissue",
+    "chunk_type": "document_checklist",
+    "section_header": "SECTION 4: DOCUMENT CHECKLIST",
+    "intent_tags": [
+      "category_gha",
+      "lost_card_reprint",
+      "magistrate_affidavit",
+      "police_gd"
+    ],
+    "content": "### Document Checklist for Category Gha (Complex) & Lost Reprints\n\nComplex corrections and lost cards follow rigid administrative processes:\n1. **Category Gha (ঘ) (Complex Corrections/Court Orders)**: Requires high-tier judicial and administrative evidence: (a) Original Affidavit executed before a First-Class Magistrate (Efi-devit); (b) Original page of a national daily newspaper containing the published name/age change notice; (c) Digital Service Book or MPO Sheet (for public/private sector employees); (d) Certified civil court decree (if applicable). For significant date of birth changes, a medical board certificate or DNA parentage test may be demanded by the DG's office [FLAG: NEEDS_SOURCE].\n2. **Lost Card / Reprint Application**: (a) Original copy of the General Diary (GD) filed at the local Police Station stating the loss of the NID; (b) Paid government fee receipt (first-time reissue fee is BDT 230, second is BDT 345, paid via bKash/Rocket) [FLAG: VERIFY_2026]; (c) Online printout of the NID server copy (if available) for verification at the counter. All photocopies must be attested by a Class-1 Gazetted Officer.",
+    "key_terms_bengali": [
+      "এফিডেভিট",
+      "জিডি কপি",
+      "রিইস্যু ফি"
+    ],
+    "key_terms_english": [
+      "Affidavit",
+      "General Diary copy",
+      "reissue fee"
+    ],
+    "confidence_level": "high",
+    "source_urls": [
+      "https://services.nidw.gov.bd"
+    ],
+    "flags": [
+      "NEEDS_SOURCE",
+      "VERIFY_2026"
+    ]
+  },
+  {
+    "chunk_id": "nid_document_checklist_field_corruption",
+    "chunk_type": "rejection_analysis",
+    "section_header": "SECTION 4: DOCUMENT CHECKLIST",
+    "intent_tags": [
+      "field_corruption",
+      "nagorikotto_sonod_monetization",
+      "bribes",
+      "form_13_identifiers"
+    ],
+    "content": "### Monetization of Free Certificates and Identifier Extortion\n\nWhile the Ministry of Local Government, Rural Development and Co-operatives specifies that the Citizenship Certificate (Nagorikotto Sonod) must be issued to local residents free of charge, in reality, this system is heavily monetized [FLAG: PRACTICE_VS_POLICY]. Ward Councilors and Union Parishad (UP) chairmen regularly demand illicit payments, ranging from BDT 100 to BDT 500, to issue the certificate. Furthermore, when submitting Form 13 for voter area transfer or NID corrections, the form requires an \"Identifier\"—typically a local UP member or councilor—to sign, seal, and input their own NID number. Local representatives routinely monetize this mandatory signature, demanding bribes to sign. Without this bribe, citizens find themselves trapped; their Form 13 is rejected at the Upazila Election Office counter for lacking a validated local representative signature, creating an administrative barrier that forces compliance with corruption [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": [
+      "নাগরিকত্ব সনদ আদায়",
+      "শনাক্তকারী স্বাক্ষর",
+      "ইউপি চেয়ারম্যান দুর্নীতি"
+    ],
+    "key_terms_english": [
+      "citizenship certificate extortion",
+      "identifier signature",
+      "UP Chairman corruption"
+    ],
+    "confidence_level": "high",
+    "source_urls": [
+      "https://services.nidw.gov.bd"
+    ],
+    "flags": [
+      "PRACTICE_VS_POLICY"
+    ]
+  }
+]

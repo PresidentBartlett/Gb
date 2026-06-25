@@ -1,0 +1,50 @@
+[
+  {
+    "chunk_id": "bdris_2026_fees_matrix",
+    "chunk_type": "fee_structure",
+    "section_header": "SECTION 5: FEES",
+    "intent_tags": ["fee_structure", "delayed_registration_fees", "correction_fees", "arbitrary_markup"],
+    "content": "### Official Fee Structure and Field Inflation\nThe Local Government Division (LGD) has set strict, standardized fees for all BDRIS interactions. Officially, birth and death registration is entirely free if completed within 45 days of the event. For delayed registrations, the official BDT fee matrix is exceptionally modest: BDT 25 for registrations completed between 46 days and 5 years, and BDT 50 for registrations of individuals older than 5 years. Bilingual English-Bengali revisions or data corrections (such as correcting the spelling of a name) officially cost BDT 50, whereas modifying the date of birth carries a statutory fee of BDT 100 [FLAG: VERIFY_2026].\n\nIn practice, citizens face a severe discrepancy between these statutory rates and what is demanded at regional counters. Local Ward Councilors, Union Parishad secretaries, and field operators routinely inflate these fees to anywhere between BDT 500 and BDT 2,000 [FLAG: PRACTICE_VS_POLICY]. This markup is justified locally under the guise of \"forms processing fees,\" \"paper printing levies,\" or internet service surcharges. Citizens are left with no choice but to pay these unauthorized fees, as resisting the markup typically results in endless processing delays or outright rejection of their paperwork on arbitrary grounds.",
+    "key_terms_bengali": ["জন্ম নিবন্ধন ফি", "সংশোধন ফি", "বিনা মূল্যে", "সরকারি ফি"],
+    "key_terms_english": ["BDRIS fee matrix", "delayed registration fee", "bilingual birth certificate fee", "inflated fees"],
+    "confidence_level": "high",
+    "source_urls": ["https://bdris.gov.bd"],
+    "flags": ["VERIFY_2026", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "bdris_2026_step_by_step_process",
+    "chunk_type": "procedural_guide",
+    "section_header": "SECTION 6: STEP-BY-STEP PROCESS",
+    "intent_tags": ["online_application_flow", "otp_limitations", "verification_attestation", "ledger_signing"],
+    "content": "### BDRIS Application Journey and OTP Restrictions\nThe procedural flow for birth registration involves a hybrid digital-to-physical journey. First, the applicant completes the digital application on the official BDRIS portal (`bdris.gov.bd/br/application`). Upon filling out the required details and uploading scanned supporting documents, the system triggers a One-Time Password (OTP) to the applicant's designated mobile phone number.\n\nA critical system control implemented by the Office of the Registrar General is the \"OTP limitation rule\" [FLAG: VERIFY_2026]. To prevent local cyber-cafés and commercial middlemen from monopolizing registrations, BDRIS strictly limits one unique mobile number to a maximum of 5 applications within the same family [FLAG: NEEDS_SOURCE]. Once this threshold is crossed, the number is locked out. After submitting the online application, the user must print the generated PDF form and physically submit it to the Union Parishad or Pourashava office along with original documents. The secretary reviews the physical files, cross-references them against the online BDRIS portal queue, and upon approval, inputs the data. The final step requires the applicant to sign the physical ledger book, and the local registrar physically signs and seals the printed bilingual certificate.",
+    "key_terms_bengali": ["অনলাইন আবেদন", "ওটিপি সীমাবদ্ধতা", "লেজার বই", "ইউনিয়ন পরিষদ সচিব"],
+    "key_terms_english": ["BDRIS application journey", "OTP restriction", "physical ledger signing", "UP secretary attestation"],
+    "confidence_level": "high",
+    "source_urls": ["https://bdris.gov.bd", "http://eservices.bdris.gov.bd"],
+    "flags": ["VERIFY_2026", "NEEDS_SOURCE"]
+  },
+  {
+    "chunk_id": "bdris_2026_rejection_reasons_recovery",
+    "chunk_type": "rejection_analysis",
+    "section_header": "SECTION 7: REJECTION REASONS",
+    "intent_tags": ["api_sync_errors", "record_not_found", "spelling_mismatch", "rejection_recovery"],
+    "content": "### Common BDRIS Rejections and Recovery Solutions\nApplicants often face automated BDRIS portal rejections, primarily categorized into two profiles:\n\n1. **\"Record Not Found\" API Errors:** This error occurs when citizens possess an older 17-digit printed certificate (digitized pre-2021) that was never synced to the central online ledger. Since the BDRIS online verification portal (`everify.bdris.gov.bd`) cannot resolve the record, any dependent applications (such as a child's registration requiring the parent's ID) fail instantly. To resolve this, the applicant must physically return to their original issuing office to request a manual database sync or \"mapping\" service, costing an official fee of BDT 50-100, though local operators routinely charge higher fees [FLAG: PRACTICE_VS_POLICY].\n\n2. **Spelling Mismatches with Parent NIDs:** If there is even a single character mismatch (e.g., \"Md.\" versus \"Mohammad\", or \"Mst.\" versus \"Most.\") between the parent's BDRIS profile and their actual NID, the system rejects the child's registration. To recover, the parent's NID or birth certificate must be corrected first to achieve absolute textual alignment. This requires applying for a formal data correction on the BDRIS portal (`eservices.bdris.gov.bd`), paying correction fees, and waiting weeks for administrative approval [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": ["রেকর্ড পাওয়া যায়নি", "ভুল তথ্য সংশোধন", "প্যারেন্ট এনআইডি ম্যাচ", "ম্যাপিং"],
+    "key_terms_english": ["record not found", "NID spelling mismatch", "BDRIS API error", "mapping sync"],
+    "confidence_level": "high",
+    "source_urls": ["https://bdris.gov.bd", "https://everify.bdris.gov.bd"],
+    "flags": ["PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "bdris_2026_sla_vs_reality",
+    "chunk_type": "timeline_analysis",
+    "section_header": "SECTION 8: TIMELINES",
+    "intent_tags": ["sla_verification", "administrative_delay", "server_sync_latency", "chairman_signature"],
+    "content": "### Advertised SLAs vs. Field Operational Realities\nOfficially, the Local Government Division advertises a rapid Service Level Agreement (SLA) of 3 to 7 working days to issue a verified birth certificate once an online application is printed and submitted [FLAG: VERIFY_2026]. In reality, the dual-track administration creates severe, undocumented backlogs.\n\nThe primary structural bottleneck is the high dependency on the Union Parishad (UP) Chairman or Zonal Secretary's physical presence and manual signature. Due to political engagements, administrative absences, or regular official field trips, physical ledger signing and printed certificate seals are routinely delayed by 2 to 4 weeks. Additionally, while the local officer may approve the application, the central BDRIS database server experiences massive synchronization latency, meaning a certificate approved in the morning may not show up on the `everify.bdris.gov.bd` portal for up to 72 hours. To bypass these delays, citizens often rely on local middlemen who maintain backchannel access to the secretary's BDRIS login credentials, enabling swift processing for an informal premium [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": ["সেবা প্রদানের সময়সীমা", "এসএলএ", "ইউনিয়ন পরিষদ চেয়ারম্যান", "সার্ভার সিঙ্ক"],
+    "key_terms_english": ["LGD SLA", "server synchronization latency", "manual signature delay", "backlog"],
+    "confidence_level": "high",
+    "source_urls": ["https://bdris.gov.bd"],
+    "flags": ["VERIFY_2026", "PRACTICE_VS_POLICY"]
+  }
+]

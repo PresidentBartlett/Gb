@@ -1,0 +1,86 @@
+[
+  {
+    "chunk_id": "etin_registration_section9_pro_tips",
+    "chunk_type": "advisory",
+    "section_header": "SECTION 9: PRO TIPS FOR CITIZENS",
+    "intent_tags": ["pro_tips", "zero_tax_return", "off_peak_hours", "summons_strategy"],
+    "content": "### SECTION 9: PRO TIPS FOR CITIZENS\n\nUnder the Income Tax Act 2023, the National Board of Revenue (NBR) has clarified that filing a traditional 'Zero Return' (where all boxes are entered as zero) is a punishable statutory offense carrying up to 5 years of imprisonment under Sections 312 and 313. To maintain compliance and keep vital credit card or business services active without paying taxes, low-income citizens must file a compliant 'Zero-Tax Return' [FLAG: VERIFY_2026]. This means declaring actual, genuine figures of income, assets, and expenses that fall safely under the tax-free exemption threshold of BDT 375,000 [FLAG: VERIFY_2026]. To avoid transaction dropouts and API synchronization errors with the Election Commission NID database, citizens should file returns online during the off-peak hours of 12:00 AM to 6:00 AM. If summoned by a Tax Circle Assessing Officer, taxpayers must draft a formal written response, attach verified bank statements, demand a signed and stamped receipt, and refuse informal speed money requests [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": ["শূন্য করের রিটার্ন", "অফ-পিক আওয়ার", "অফিসিয়াল সমন"],
+    "key_terms_english": ["Zero-Tax Return", "Off-peak Hours", "Official Summons"],
+    "confidence_level": "high",
+    "source_urls": ["https://nbr.gov.bd"],
+    "flags": ["VERIFY_2026", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "etin_registration_section10_fraud_warnings",
+    "chunk_type": "security_advisory",
+    "section_header": "SECTION 10: FRAUD & SCAM WARNINGS",
+    "intent_tags": ["scam_warnings", "phishing_portals", "mfs_scams", "cyber_cafe_fraud"],
+    "content": "### SECTION 10: FRAUD & SCAM WARNINGS\n\nTaxpayers in Bangladesh face a significant risk of digital financial fraud. A major threat includes SMS campaigns and phishing portals mimicking NBR's domain that demand immediate penalty payments via personal Mobile Financial Services (MFS) accounts like bKash or Nagad to avoid bank account freezes [FLAG: NEEDS_SOURCE]. NBR never requests tax or penalty payments via individual MFS transfers. Additionally, there is a widespread practice of roadside cyber cafes and dishonest tax agents submitting falsified rent, medical expenses, or fabricated investment credits to illegally manufacture tax refunds [FLAG: PRACTICE_VS_POLICY]. If NBR's audit scripts detect these discrepancies, the individual taxpayer remains legally and criminally liable for tax evasion, regardless of who submitted the data. Taxpayers must protect their portal passwords, review draft submissions carefully, and report suspicious demands or scam links to the NBR Vigilance Cell.",
+    "key_terms_bengali": ["ফিশিং পোর্টাল", "এমএফএস স্ক্যাম", "সাইবার ক্যাফে প্রতারণা", "এনবিআর উইজিলেন্স সেল"],
+    "key_terms_english": ["Phishing Portal", "MFS Scam", "Cyber Cafe Fraud", "NBR Vigilance Cell"],
+    "confidence_level": "high",
+    "source_urls": ["https://nbr.gov.bd"],
+    "flags": ["NEEDS_SOURCE", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "etin_registration_section11_dialogues_part1",
+    "chunk_type": "training_sop",
+    "section_header": "SECTION 11: SAMPLE TRAINING CONVERSATIONS (DIALOGUES 1 & 2)",
+    "intent_tags": ["dialogues", "freelancer", "invalid_employer_tin", "training_data"],
+    "content": "### SECTION 11: SAMPLE TRAINING CONVERSATIONS (DIALOGUES 1 & 2)\n\n**ডায়ালগ ১: ট্রেড লাইসেন্স ছাড়া ফ্রিল্যান্সার**\n*ব্যবহারকারী:* ভাই, আমি ফ্রিল্যান্সিং করি কিন্তু আমার কোনো ট্রেড লাইসেন্স নেই। আমি কি ই-টিন করতে পারব?\n*সহায়ক:* হ্যাঁ, অবশ্যই পারবেন। ই-টিন করার সময় করদাতার ক্যাটাগরি হিসেবে 'Individual' এবং আয়ের উৎস হিসেবে 'Service/Profession' সিলেক্ট করবেন। ফ্রিল্যান্সারদের জন্য কোনো বাধ্যতামূলক ট্রেড লাইসেন্স লাগে না, যদি না আপনি লিমিটেড কোম্পানি খুলতে চান [FLAG: PRACTICE_VS_POLICY].\n\n**ডায়ালগ ২: অবৈধ নিয়োগকর্তার টিআইএন**\n*ব্যবহারকারী:* ই-রিটার্ন পোর্টালে আমার কোম্পানির টিআইএন দেওয়ার পর 'Invalid Employer TIN' দেখাচ্ছে, এখন কী করব?\n*সহায়ক:* এই সমস্যাটি সাধারণত তখন ঘটে যখন কোম্পানি তাদের নতুন ১২-ডিজিটের ই-টিন আপডেট করেনি অথবা সিস্টেমে ভুল ডাটা রয়েছে। আপনি আপনার এইচআর (HR) টিম থেকে সঠিক টিআইএন নিয়ে ইনপুট দিন। যদি সমস্যাটি না মেটে, তবে আপনি 'Salary Source' এ সরাসরি ম্যানুয়ালি কোম্পানির নাম এবং আয়ের বিবরণ লিখে দিন [FLAG: PRACTICE_VS_POLICY]. এআই সিস্টেম এটি গ্রহণ করবে, তবে পরবর্তীতে এনবিআর ম্যানুয়াল ভেরিফিকেশন চাইতে পারে।",
+    "key_terms_bengali": ["ফ্রিল্যান্সার টিআইএন", "নিয়োগকর্তার টিআইএন", "প্রশিক্ষণ কথোপকথন"],
+    "key_terms_english": ["Freelancer TIN", "Employer TIN", "Training Dialogue"],
+    "confidence_level": "high",
+    "source_urls": ["https://secure.incometax.gov.bd"],
+    "flags": ["PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "etin_registration_section11_dialogues_part2",
+    "chunk_type": "training_sop",
+    "section_header": "SECTION 11 (CONTINUED): DIALOGUES 3, 4 & 5",
+    "intent_tags": ["dialogues", "cyber_cafe_fraud", "zero_tax_credit_card", "fake_sms_scam"],
+    "content": "### SECTION 11 (CONTINUED): DIALOGUES 3, 4 & 5\n\n**ডায়ালগ ৩: সাইবার ক্যাফে প্রতারণা**\n*ব্যবহারকারী:* সাইবার ক্যাফে থেকে ভুল তথ্য দিয়ে আমার রিটার্ন জমা দিয়েছে, এখন কীভাবে সংশোধন করব?\n*সহায়ক:* ভয় পাবেন না। আয়কর আইন ২০২৩ অনুযায়ী আপনি ভুল সংশোধন করে একটি 'Revised Return' বা সংশোধিত রিটার্ন জমা দিতে পারবেন। এর জন্য আপনাকে পোর্টালে গিয়ে 'Revised Return' অপশনটি বেছে নিয়ে সঠিক আয়ের বিবরণী এবং চালান আপলোড করতে হবে [FLAG: VERIFY_2026].\n\n**ডায়ালগ ৪: ক্রেডিটকার্ডের জন্য শূন্য রিটার্ন**\n*ব্যবহারকারী:* আমার ইনকাম ট্যাক্স সীমার নিচে, কিন্তু ক্রেডিট কার্ডের জন্য পিএসআর (PSR) লাগবে। কীভাবে শূন্য রিটার্ন দেব?\n*সহায়ক:* মনে রাখবেন, সম্পূর্ণ 'শূন্য রিটার্ন' (সব ঘরে শূন্য দেওয়া) আইনত দণ্ডনীয় অপরাধ [FLAG: VERIFY_2026]. আপনাকে আপনার প্রকৃত আয় এবং ব্যয় সঠিকভাবে দেখাতে হবে। তাহলেই সিস্টেম স্বয়ংক্রিয়ভাবে একটি শূন্য-কর রিটার্ন (Zero-Tax Return) একনলেজমেন্ট স্লিপ তৈরি করবে যা আপনি ক্রেডিট কার্ড ভেরিফিকেশনের জন্য ব্যবহার করতে পারবেন।\n\n**ডায়ালগ ৫: ভুয়া ট্যাক্স ফাঁকির এসএমএস**\n*ব্যবহারকারী:* আমার ফোনে একটি এসএমএস এসেছে যে ট্যাক্স ফাঁকির জন্য মামলা হবে এবং একটি বিকাশ নম্বরে জরিমানা দিতে বলা হয়েছে।\n*সহায়ক:* এটি সম্পূর্ণ একটি ভুয়া বার্তা ও স্ক্যাম। এনবিআর বা আয়কর বিভাগ কখনোই কোনো ব্যক্তিগত বিকাশ বা নগদ নম্বরে জরিমানা বা ট্যাক্স দেওয়ার নির্দেশনা পাঠায় না [FLAG: NEEDS_SOURCE]. কোনো লিংকে ক্লিক করবেন না এবং কোনো অর্থ পাঠাবেন না।",
+    "key_terms_bengali": ["রিভাইজড রিটার্ন", "ভুল সংশোধন", "জাল এসএমএস"],
+    "key_terms_english": ["Revised Return", "Correction", "Fake SMS"],
+    "confidence_level": "high",
+    "source_urls": ["https://etaxnbr.gov.bd"],
+    "flags": ["VERIFY_2026", "NEEDS_SOURCE", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "etin_registration_section12_dependencies",
+    "chunk_type": "system_dependencies",
+    "section_header": "SECTION 12: RELATED PROCEDURES & SYSTEM DEPENDENCIES",
+    "intent_tags": ["dependencies", "trade_license", "brta", "civic_gates", "psr_dependency"],
+    "content": "### SECTION 12: RELATED PROCEDURES & SYSTEM DEPENDENCIES\n\nIn the contemporary governance ecosystem of Bangladesh, the electronic Taxpayer Identification Number (e-TIN) and the Proof of Submission of Return (PSR) serve as the absolute gatekeepers for a vast array of downstream civic and corporate procedures. Under current budget acts, a citizen cannot execute several standard administrative transactions without presenting a legally verified PSR acknowledgment slip. For instance, the Local Government Division instantly freezes any municipal Trade License renewal if the applicant fails to supply their PSR. Similarly, the Bangladesh Road Transport Authority (BRTA) blocks all motor vehicle registration and fitness certificate renewals (except for two- and three-wheelers) for non-compliant individuals. Furthermore, securing corporate bank loans exceeding BDT 20 lakh, applying for new commercial utility or gas connections, purchasing savings certificates (Sanchayapatra) above BDT 5 lakh [FLAG: VERIFY_2026], and executing property deed registrations for values exceeding specified municipal limits are all strictly dependent on live PSR validation. Any attempt to bypass these checks triggers immediate transaction rejection across respective database linkages.",
+    "key_terms_bengali": ["পিএসআর নির্ভরতা", "ট্রেড লাইসেন্স নবায়ন", "বিআরটিএ যানবাহন নিবন্ধন"],
+    "key_terms_english": ["PSR Dependency", "Trade License Renewal", "BRTA Vehicle Registration"],
+    "confidence_level": "high",
+    "source_urls": ["https://nbr.gov.bd"],
+    "flags": ["VERIFY_2026"]
+  },
+  {
+    "chunk_id": "etin_registration_section13_circle_transfer",
+    "chunk_type": "procedural_guide",
+    "section_header": "SECTION 13: CORRECTIONS & TAX CIRCLE TRANSFERS",
+    "intent_tags": ["circle_transfer", "file_migration", "dct_approval", "manual_audit"],
+    "content": "### SECTION 13: TAX CIRCLE TRANSFERS & CORRECTIONS\n\nWhen a taxpayer changes their permanent residence, employer, or corporate operational address, updating their Tax Circle (কর সার্কেল) is legally required. This correction process is notorious for its bureaucratic difficulty. To execute a circle transfer, the taxpayer must submit a formal, physical application along with a transfer petition to the Deputy Commissioner of Taxes (DCT) of both their current (departing) Tax Circle and their prospective (receiving) Tax Circle. The application must include the citizen's current e-TIN certificate, NID, proof of new address (such as a utility bill or commercial lease agreement), and certified copies of the past three years' tax return acknowledgment slips. In practice, this process is plagued by manual approval loops and systemic 'dual-circle harassment' [FLAG: PRACTICE_VS_POLICY]. The departing DCT is often highly reluctant to release the taxpayer's physical files and records, fearing a reduction in their circle's total collection targets. Consequently, they may intentionally stall the transfer by launching a retrospective manual audit of previous filings.",
+    "key_terms_bengali": ["কর সার্কেল পরিবর্তন", "ফাইল স্থানান্তর", "উপ কর কমিশনার অনুমোদন"],
+    "key_terms_english": ["Tax Circle Transfer", "File Migration", "DCT Approval"],
+    "confidence_level": "high",
+    "source_urls": ["https://nbr.gov.bd"],
+    "flags": ["PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "etin_registration_section14_sources_flags",
+    "chunk_type": "legal_foundation",
+    "section_header": "SECTION 14: SOURCE LIST & INTEGRITY FLAGGING",
+    "intent_tags": ["source_urls", "integrity_flags", "data_validation", "gazettes"],
+    "content": "### SECTION 14: SOURCE LIST & INTEGRITY FLAGGING\n\nThis analytical extraction of the Bangladesh Taxpayer Identification Number (e-TIN) and e-Return compliance framework is anchored strictly on primary legal and regulatory sources. Key source documentation includes: (1) The Income Tax Act 2023, published as an official gazette by the Ministry of Law, Justice and Parliamentary Affairs. (2) The National Board of Revenue (NBR) Official Portals (`nbr.gov.bd`, `secure.incometax.gov.bd`, and `etaxnbr.gov.bd`). (3) Ministry of Finance annual budget gazettes and SRO databases. (4) The Election Commission National Identity Registration Wing database (`nidw.gov.bd`). To preserve the ground-truth accuracy of this dataset for search indexing, multiple integrity flags have been embedded inside the narrative [FLAG: NEEDS_SOURCE]. These markers are systematically divided into three main operational warning tracks: `[FLAG: VERIFY_2026]` for evolving tax-free slabs, rebate limits, and annual interest updates; `[FLAG: NEEDS_SOURCE]` where primary NBR data structures or API synchronization timelines cannot be verified; and `[FLAG: PRACTICE_VS_POLICY]` where real-world tax zone delays, system outages, and manual bureaucratic resistance directly conflict with official ministerial guidelines.",
+    "key_terms_bengali": ["উৎস ইউআরএল", "সতর্কতা ফ্ল্যাগ", "তথ্য যাচাইকরণ"],
+    "key_terms_english": ["Source URLs", "Integrity Flags", "Data Verification"],
+    "confidence_level": "high",
+    "source_urls": ["https://nbr.gov.bd", "https://etaxnbr.gov.bd", "https://secure.incometax.gov.bd", "https://nidw.gov.bd"],
+    "flags": ["VERIFY_2026", "NEEDS_SOURCE", "PRACTICE_VS_POLICY"]
+  }
+]

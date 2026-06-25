@@ -1,0 +1,74 @@
+[
+  {
+    "chunk_id": "etin_registration_section5_fees_penalties_part1",
+    "chunk_type": "fee_structure",
+    "section_header": "SECTION 5: FEES AND PENALTY MATRIX",
+    "intent_tags": ["fees", "penalties", "late_filing", "delay_interest"],
+    "content": "### SECTION 5: FEES AND PENALTY MATRIX\n\nThe National Board of Revenue (NBR) mandates that the initial registration for an electronic Taxpayer Identification Number (e-TIN) and the subsequent generation of the digital TIN certificate are entirely free of charge (BDT 0). However, the statutory costs for non-compliance are severe under the Income Tax Act 2023. Under Section 266, failing to file an annual income tax return by the designated Tax Day (typically November 30) without reasonable cause triggers a penalty of 10% of the tax payable on the last assessed income, subject to a minimum of BDT 1,000 [FLAG: VERIFY_2026]. For first-time or unassessed individual taxpayers, this initial penalty is capped at a maximum of BDT 5,000, while previously assessed taxpayers face a cap of 50% of the last assessed tax. Additionally, a continuing default penalty of BDT 50 per day is levied automatically for every day the non-compliance persists beyond the deadline. Delay interest is also charged at 4% per month (or part thereof) under the active 2026 guidelines [FLAG: VERIFY_2026].",
+    "key_terms_bengali": ["জরিমানা", "বিলম্ব সুদ", "আয়কর রিটার্ন"],
+    "key_terms_english": ["Penalty", "Delay Interest", "Tax Return"],
+    "confidence_level": "high",
+    "source_urls": ["https://nbr.gov.bd"],
+    "flags": ["VERIFY_2026"]
+  },
+  {
+    "chunk_id": "etin_registration_section5_itp_fees_false_tin",
+    "chunk_type": "fee_structure",
+    "section_header": "SECTION 5: PRACTITIONER FEES & FRAUDULENT TIN PENALTY",
+    "intent_tags": ["practitioner_fees", "itp_cost", "false_tin", "concealment_penalty"],
+    "content": "### SECTION 5 (CONTINUED): PRACTITIONER FEES & FRAUD PENALTY\n\nFor taxpayers seeking professional assistance, hiring a registered Income Tax Practitioner (ITP) or Chartered Accountant to file an individual return typically costs between BDT 3,000 and BDT 15,000 [FLAG: PRACTICE_VS_POLICY], depending on asset complexity, foreign income, and corporate declarations. If taxpayers or intermediaries attempt to evade compliance by using a false or altered e-TIN certificate on any tax return or required transaction document, Section 268 of the Income Tax Act 2023 allows the Deputy Commissioner of Taxes (DCT) to impose a flat penalty of up to BDT 20,000. Under Section 272, if a taxpayer intentionally conceals income or misrepresents assets, liabilities, or expenses to reduce their tax burden, the proceeding authority can levy a penalty calculated as 15% of the evaded tax amount plus an additional 10% penalty of the avoided tax multiplied by the number of years from the point of evasion to the current assessment [FLAG: VERIFY_2026].",
+    "key_terms_bengali": ["আয়কর আইনজীবী", "ভুয়া টিআইএন", "আয় গোপন করা"],
+    "key_terms_english": ["Income Tax Practitioner", "False TIN", "Concealment of Income"],
+    "confidence_level": "high",
+    "source_urls": ["https://nbr.gov.bd"],
+    "flags": ["PRACTICE_VS_POLICY", "VERIFY_2026"]
+  },
+  {
+    "chunk_id": "etin_registration_section6_etin_creation_process",
+    "chunk_type": "procedural_guide",
+    "section_header": "SECTION 6: STEP-BY-STEP INITIAL E-TIN CREATION",
+    "intent_tags": ["etin_creation", "nid_verification", "registration_steps"],
+    "content": "### SECTION 6: STEP-BY-STEP INITIAL E-TIN CREATION\n\nThe step-by-step digital process for generating an initial e-TIN is designed to be fully automated and paperless. First, the citizen must access the official portal at `secure.incometax.gov.bd/registration` and click on 'Register'. The user creates a new account by defining a unique username, password, security question, and a valid Bangladeshi mobile number. Upon logging in, the user selects the 'TIN Application' tab. Here, they must select their taxpayer category (typically Individual Resident Bangladeshi), specify the main source of income (e.g., Salary, Business, or Profession), and choose the appropriate assessment location based on their area of residence.\n\nNext, the system demands the applicant's exact 10 or 17-digit National Identity (NID) number, date of birth, and full legal name. The portal's backend API queries the National Election Commission database in real-time to match these biometric data points. Once verified, the user receives a 4-digit One-Time Password (OTP) on their registered mobile number. After entering the OTP and submitting the form, the system immediately generates the 12-digit e-TIN, allowing the taxpayer to instantly download the PDF certificate.",
+    "key_terms_bengali": ["টিন নিবন্ধন", "এনআইডি যাচাই", "ওটিপি"],
+    "key_terms_english": ["TIN Registration", "NID Verification", "OTP"],
+    "confidence_level": "high",
+    "source_urls": ["https://secure.incometax.gov.bd"],
+    "flags": []
+  },
+  {
+    "chunk_id": "etin_registration_section6_return_filing_process",
+    "chunk_type": "procedural_guide",
+    "section_header": "SECTION 6: ANNUAL E-RETURN FILING STEP-BY-STEP",
+    "intent_tags": ["return_submission", "e_return_portal", "filing_steps", "peak_traffic_issues"],
+    "content": "### SECTION 6 (CONTINUED): ANNUAL E-RETURN FILING PROCESS\n\nTo submit an annual return, taxpayers must use the dedicated e-Return portal at `etaxnbr.gov.bd`. After logging in using their 12-digit e-TIN and a verified mobile OTP, the taxpayer must fill out the interactive return wizard. The process consists of: (1) Select the Assessment Year (e.g., 2025-2026) and confirm residency status. (2) Choose the applicable income sources. (3) Input detailed earnings, ensuring salary figures match the employer-issued salary certificate, and claim eligible investment rebates. (4) For individuals with total assets exceeding BDT 40 lakh or owning a motor vehicle, complete the Statement of Assets, Liabilities, and Lifestyle (Form IT-10B or IT-10BB) [FLAG: VERIFY_2026]. (5) The system automatically computes the net taxable income and rebate-adjusted tax payable.\n\n(6) Any outstanding tax must be paid digitally via the integrated e-Payment gateway (using A-Chalan, bKash, or debit/credit cards). (7) Finally, the taxpayer verifies the submission with an electronic signature and submits the return. Although the NBR promises an 'instant paperless' output, during peak periods in November, severe database degradation, network timeouts, and OTP delivery failures frequently block submissions [FLAG: PRACTICE_VS_POLICY], forcing citizens to make multiple attempts or resort to manual physical filings.",
+    "key_terms_bengali": ["ই-রিটার্ন দাখিল", "সম্পদ ও দায় বিবরণী", "সার্ভার ক্র্যাশ"],
+    "key_terms_english": ["e-Return Submission", "Statement of Assets and Liabilities", "Server Crash"],
+    "confidence_level": "high",
+    "source_urls": ["https://etaxnbr.gov.bd"],
+    "flags": ["VERIFY_2026", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "etin_registration_section7_rejection_remedies",
+    "chunk_type": "rejection_analysis",
+    "section_header": "SECTION 7: REJECTION REASONS & EXACT RECOVERY STEPS",
+    "intent_tags": ["nid_mismatch", "duplicate_tin", "ghost_tin", "salary_mismatch", "correction_steps"],
+    "content": "### SECTION 7: CRITICAL REJECTIONS & SYSTEM RECOVERY STEPS\n\nTaxpayers navigating the digital NBR ecosystem frequently encounter three major system-level bottlenecks. First, NID-NBR API Mismatches occur when the legal spelling of names or dates of birth differ between the NID database and legacy NBR tax records. During registration, the portal halts with an NID verification error. The fix requires updating the NID details via the Election Commission portal or submitting a formal TIN modification application online, supported by an uploaded NID photocopy and SSC certificate, taking 5 to 10 working days at BDT 0 official cost.\n\nSecond, Duplicate or Ghost TIN Detection is triggered when unauthorized brokers fraudulently generate a secondary e-TIN using a citizen's NID to execute land or car transactions. The system blocks new registrations with 'Registration already exists'. The taxpayer must submit a manual cancellation and merger petition to their assigned Taxes Circle Deputy Commissioner of Taxes (DCT), supported by an identity affidavit and NID. This takes 15 to 30 working days to resolve and costs BDT 0 officially [FLAG: PRACTICE_VS_POLICY]. Third, mismatched employer details on salary certificates occur when the corporate TIN entered does not align with NBR's internal withholding database. The taxpayer must obtain the correct corporate TIN from HR and revise the employer profile on the portal within 2 working days.",
+    "key_terms_bengali": ["এনআইডি অমিল", "ডুপ্লিকেট টিন", "টিন সংশোধন", "অভিযোগ দাখিল"],
+    "key_terms_english": ["NID Mismatch", "Duplicate TIN", "TIN Correction", "Grievance Submission"],
+    "confidence_level": "high",
+    "source_urls": ["https://secure.incometax.gov.bd", "https://etaxnbr.gov.bd"],
+    "flags": ["PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "etin_registration_section8_timelines_refund_backlogs",
+    "chunk_type": "timeline_analysis",
+    "section_header": "SECTION 8: REALISTIC PROCESSING TIMELINES & REFUND PIPELINE",
+    "intent_tags": ["processing_timeline", "sla", "tax_refund", "audit_loops", "speed_money"],
+    "content": "### SECTION 8: PROCESSING TIMELINES & SYSTEMIC REFUND PIPELINES\n\nWhile the official service level agreements (SLAs) promise instantaneous digital processing, the real-world operational pipeline in 2026 varies drastically depending on the task. Generating a new e-TIN or submitting an annual e-Return is typically completed in under 20 minutes if the system APIs are functional. However, any manual correction, duplicate file reconciliation, or tax zone relocation requires manual bureaucratic processing at the Circle level, taking between 15 to 30 working days.\n\nThe most egregious divergence between official policy and field practice occurs in the tax refund pipeline. Legally, under the Income Tax Act 2023, valid tax refund claims must be audited, approved, and disbursed within 60 to 90 days after the assessment is finalized. In reality, claiming a legitimate refund triggers a manual audit loop where circle-level officers find arbitrary technical errors to stall the file. Taxpayers routinely experience multi-year delays [FLAG: PRACTICE_VS_POLICY], with many claiming they must pay informal 'speed fees' representing 10% to 30% of the refund value [FLAG: PRACTICE_VS_POLICY] to get their cheques signed, forcing most individual filers to carry forward their refund balances rather than requesting payouts.",
+    "key_terms_bengali": ["প্রক্রিয়াকরণ সময়সীমা", "কর ফেরত", "ম্যানুয়াল অডিট", "স্পিড মানি"],
+    "key_terms_english": ["Processing Timeline", "Tax Refund", "Manual Audit", "Speed Money"],
+    "confidence_level": "high",
+    "source_urls": ["https://nbr.gov.bd"],
+    "flags": ["PRACTICE_VS_POLICY"]
+  }
+]

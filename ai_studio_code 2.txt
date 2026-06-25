@@ -1,0 +1,74 @@
+[
+  {
+    "chunk_id": "bdris_2026_pro_tips",
+    "chunk_type": "advisory",
+    "section_header": "SECTION 9: PRO TIPS",
+    "intent_tags": ["server_throttling_bypass", "database_sync", "off_peak_hours", "operator_workarounds"],
+    "content": "### Direct Server Throttling Bypass and Verification Sync\nThe BDRIS server architecture experiences significant processing dropouts and timeout errors during standard work hours (10:00 AM to 5:00 PM) due to high queries from thousands of local offices. To successfully submit applications on the portal (`bdris.gov.bd`) without database disconnection, applicants should complete online entries during off-peak hours, specifically between 11:00 PM and 6:00 AM, when traffic drops considerably [FLAG: VERIFY_2026].\n\nIf a newly printed birth registration certificate does not display on the central verification portal (`everify.bdris.gov.bd`), this indicates a localized replication lag. The database update sequence between local Union Parishad or City Corporation local caches and the central ORG ledger can stall for over 7 days. To force a sync, the applicant should request the local office data operator to log into their internal BDRIS administrative dashboard and run a manual \"Verify Sync\" or \"Re-print\" action [FLAG: PRACTICE_VS_POLICY]. This triggers an immediate API replication call to update the central server, resolving the lookup error in minutes rather than weeks.",
+    "key_terms_bengali": ["সার্ভার থ্রটলিং", "ম্যানুয়াল সিঙ্ক", "অফ-পিক আওয়ার", "ডাটাবেজ রেপ্লিকেশন"],
+    "key_terms_english": ["server throttling", "manual database sync", "off-peak submission", "replication lag"],
+    "confidence_level": "high",
+    "source_urls": ["https://bdris.gov.bd", "https://everify.bdris.gov.bd"],
+    "flags": ["VERIFY_2026", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "bdris_2026_fraud_warnings",
+    "chunk_type": "security_advisory",
+    "section_header": "SECTION 10: FRAUD WARNINGS",
+    "intent_tags": ["qr_code_scams", "phishing_domains", "extortion_detection", "official_verification"],
+    "content": "### Exposing QR Code Fraud and Local Extortion Rings\nCitizens seeking urgent birth registration frequently fall victim to \"Fake BRC QR Code\" scams. Unscrupulous cyber cafés generate fraudulent, manual PDF certificates that feature a generated QR code. When scanned with a smartphone, the QR code redirects the user to a clone or phishing website (e.g., `everify-bdris.com` or `bdris-gov.org` instead of the genuine `.gov.bd` suffix) designed to display fabricated registration details [FLAG: VERIFY_2026]. To protect sensitive data, applicants must manually inspect the browser address bar during QR scans to confirm the official domain: `everify.bdris.gov.bd`.\n\nAdditionally, systemic corruption exists within certain municipal and Union Parishad offices, where local data-entry operators deliberately withhold digital approval queues. They exploit system downtimes to extort informal facilitation fees (ranging from BDT 500 to BDT 2,000) from citizens facing time-sensitive deadlines for passport issuance or school admissions [FLAG: PRACTICE_VS_POLICY]. Citizens are advised to report these extortion attempts directly to the Upazila Nirbahi Officer (UNO) or via the official helpline rather than complying with unauthorized payment demands.",
+    "key_terms_bengali": ["জাল কিউআর কোড", "ফিশিং ডোমেন", "ইউনিয়ন পরিষদ চাঁদাবাজি", "ডোমেইন ভেরিফিকেশন"],
+    "key_terms_english": ["fake QR code", "phishing domains", "operator extortion", "domain verification"],
+    "confidence_level": "high",
+    "source_urls": ["https://everify.bdris.gov.bd", "https://bdris.gov.bd"],
+    "flags": ["VERIFY_2026", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "bdris_2026_training_dialogues",
+    "chunk_type": "training_sop",
+    "section_header": "SECTION 11: TRAINING DIALOGUES",
+    "intent_tags": ["dialogues_bengali", "training_sop", "practice_guidelines", "practical_scenarios"],
+    "content": "### 5 BDRIS Training Dialogues\n\n**১. নবজাতক নিবন্ধন:**\nপ্র: আমার ৪৫ দিনের বাচ্চার জন্ম নিবন্ধন কীভাবে করাবো?\nউ: বাচ্চার ইপিআই (টিকা) কার্ড, হাসপাতালের ডিসচার্জ স্লিপ আর বাবা-মায়ের ১৭ ডিজিটের অনলাইন জন্ম নিবন্ধন ও এনআইডি কপি দিয়ে অনলাইনে আবেদন করে স্থানীয় কার্যালয়ে জমা দিন।\n\n**২. হাসপাতাল স্লিপ ছাড়া বয়স্ক নিবন্ধন:**\nপ্র: হাসপাতাল স্লিপ নেই, প্রাপ্তবয়স্কের নিবন্ধন কীভাবে হবে?\nউ: আপনার এসএসসি পরীক্ষার সার্টিফিকেট অথবা রেজিস্টার্ড সরকারি ডাক্তারের বয়স নির্ধারণী মেডিকেল সার্টিফিকেট এবং হোল্ডিং ট্যাক্স বা বিদ্যুৎ বিলের কপি দিয়ে অনলাইনে আবেদন করুন।\n\n**৩. ইংরেজিতে বানান সংশোধন:**\nপ্র: সার্টিফিকেটে আমার ইংরেজি নামের বানান ভুল এসেছে, কীভাবে ঠিক করবো?\nউ: সংশোধনের আবেদন করতে হবে। প্রমাণ হিসেবে সঠিক ইংরেজি বানানের এসএসসি সার্টিফিকেট বা পাসপোর্ট যুক্ত করুন এবং নির্ধারিত সরকারি ফি জমা দিন।\n\n**৪. এতিমদের বাবা-মার পরিচয়পত্রের বিকল্প:**\nপ্র: এতিমদের বাবা-মার এনআইডি বা জন্ম নিবন্ধন বাধ্যতামূলক?\nউ: না, এতিমখানা বা সমাজসেবা অধিদপ্তরের প্রত্যয়নপত্র থাকলে বাবা-মায়ের পরিচয়পত্র ছাড়াই আবেদন করতে পারবেন [FLAG: NEEDS_SOURCE]।\n\n**৫. জাল সার্টিফিকেট চেনা:**\nপ্র: দোকান থেকে আনা সার্টিফিকেটটি আসল না নকল বুঝবো কীভাবে?\nউ: কিউআর কোড স্ক্যান করে দেখুন ইউআরএলটি অবশ্যই 'everify.bdris.gov.bd' দিয়ে শুরু হয়েছে কিনা। অন্য কোনো ক্লোন ডোমেইন বা লিঙ্ক দেখালে সেটি ভুয়া [FLAG: PRACTICE_VS_POLICY]।",
+    "key_terms_bengali": ["জন্ম নিবন্ধন প্রশ্নোত্তর", "প্রশিক্ষণ সংলাপ", "সরাসরি সহায়তা", "তথ্য যাচাই"],
+    "key_terms_english": ["Q&A scenarios", "training dialogues", "practice guidelines", "validation checks"],
+    "confidence_level": "high",
+    "source_urls": ["https://bdris.gov.bd", "https://everify.bdris.gov.bd"],
+    "flags": ["NEEDS_SOURCE", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "bdris_2026_dependencies",
+    "chunk_type": "system_dependencies",
+    "section_header": "SECTION 12: DEPENDENCIES",
+    "intent_tags": ["passport_dependencies", "school_admission", "nid_linkage", "api_integrations"],
+    "content": "### Cross-Platform Dependencies of BDRIS Data\nThe 17-digit online birth certificate generated via BDRIS is the absolute legal prerequisite for critical public and private sector workflows in Bangladesh. \n\n1. **Minor Passports:** Under Ministry of Home Affairs rules, children under the age of 18 cannot acquire a machine-readable or e-passport without a digitally verified birth certificate. The Department of Immigration and Passports (DIP) database calls the BDRIS API in real-time. Any spelling or character mismatch between the child's BDRIS profile and the parent's NID stalls the passport application [FLAG: VERIFY_2026].\n2. **School Admission:** From primary school (Class 1) up to the Secondary School Certificate (SSC) registration, the Ministry of Education mandates the submission of the 17-digit BRN. Manual records are strictly rejected.\n3. **National Identity (NID) Registration:** For first-time applicants under 25, the Bangladesh Election Commission uses the BDRIS database as the primary source of truth. The applicant's name, parents' details, and date of birth are imported directly from BDRIS into the NID database. If the birth certificate is inaccurate or offline, the NID enrollment freezes, causing a total halt in civic functionality [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": ["পাসপোর্ট লিংক", "স্কুল ভর্তি", "এনআইডি নিবন্ধন", "তথ্যসূত্র যাচাইকরণ"],
+    "key_terms_english": ["passport integration", "school admission", "NID enrollment", "BDRIS API dependency"],
+    "confidence_level": "high",
+    "source_urls": ["https://bdris.gov.bd", "https://services.nidw.gov.bd"],
+    "flags": ["VERIFY_2026", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "bdris_2026_corrections_amendments",
+    "chunk_type": "procedural_guide",
+    "section_header": "SECTION 13: CORRECTIONS & AMENDMENTS",
+    "intent_tags": ["age_correction_rules", "uno_approval_bottleneck", "correction_pathway", "medical_board_verification"],
+    "content": "### Date of Birth Corrections and the UNO Bottleneck\nCorrecting a date of birth (DOB) is the most heavily restricted process within BDRIS, designed to prevent pension and job-seeking age fraud. To change a birth year, the applicant must initiate a correction request via `bdris.gov.bd/br/correction`.\n\nThe required evidence includes the applicant's official secondary school certificate (SSC or equivalent) and registration card. For individuals without educational transcripts, a verified age-determination certificate signed by a district Civil Surgeon or a designated government Medical Board is mandatory [FLAG: NEEDS_SOURCE].\n\nOnce submitted and verified by the local Union Parishad or City Corporation Secretary, the file is routed to the Upazila Nirbahi Officer (UNO) or Zonal Executive Officer for physical review and administrative approval. This routing creates a severe administrative bottleneck [FLAG: VERIFY_2026]. UNOs routinely delay approval queues for months, demanding manual physical hearings and cross-referencing old physical ledgers to confirm the authenticity of the request. Many applicants face indefinite delays unless they hire local intermediaries to manually track and push the physical folder through the UNO's office desk [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": ["জন্ম তারিখ সংশোধন", "ইউএনও অনুমোদন", "বয়স নির্ধারণ সনদ", "ফাইল স্থবিরতা"],
+    "key_terms_english": ["DOB correction", "UNO approval bottleneck", "Civil Surgeon medical board", "file delay"],
+    "confidence_level": "high",
+    "source_urls": ["https://bdris.gov.bd"],
+    "flags": ["NEEDS_SOURCE", "VERIFY_2026", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "bdris_2026_source_list",
+    "chunk_type": "faq",
+    "section_header": "SECTION 14: SOURCE LIST",
+    "intent_tags": ["verified_urls", "system_status", "operational_flags", "digital_governance"],
+    "content": "### Verified Domain Registries and Operational Integrity Flags\nAll official procedures, registrations, and database verification sequences for the 2025/2026 BDRIS framework must be completed through the secure digital infrastructure maintained by the Office of the Registrar General, Birth and Death Registration under the Local Government Division (LGD):\n\n- **Main BDRIS Portal:** `https://bdris.gov.bd` (The central hub for registration guidelines and local office portals).\n- **Application Portal:** `https://bdris.gov.bd/br/application` (Direct portal for initiating new birth certificates).\n- **Correction Portal:** `https://bdris.gov.bd/br/correction` (Gateway for modifying misspelled names and demographics).\n- **Online Verification Gateway:** `https://everify.bdris.gov.bd` (Real-time public portal for verifying 17-digit certificates).\n- **Application Tracking:** `https://bdris.gov.bd/br/application/status` (Service for checking the status of approvals).\n\nThe analytical assessments throughout this document utilize strict operational integrity flags: `[FLAG: VERIFY_2026]` signifies policies prone to mid-year revision; `[FLAG: NEEDS_SOURCE]` indicates non-codified edge cases lacking official documentation; and `[FLAG: PRACTICE_VS_POLICY]` highlights the operational gap where local administrative practices diverge from official digital mandates [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": ["সরকারি ওয়েবসাইট", "যাচাইকরণ লিংক", "নিবন্ধন ট্র্যাক", "কার্যক্রম ফ্ল্যাগ"],
+    "key_terms_english": ["verified URLs", "application status", "BDRIS subdomains", "operational flags"],
+    "confidence_level": "high",
+    "source_urls": ["https://bdris.gov.bd", "https://everify.bdris.gov.bd"],
+    "flags": ["VERIFY_2026", "NEEDS_SOURCE", "PRACTICE_VS_POLICY"]
+  }
+]

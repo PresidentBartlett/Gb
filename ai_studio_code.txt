@@ -1,0 +1,225 @@
+[
+  {
+    "chunk_id": "section_8_timeline_analysis_1",
+    "chunk_type": "timeline_analysis",
+    "section_header": "Section 8: Realistic Timelines",
+    "intent_tags": [
+      "e-passport delivery timeline",
+      "official vs ground truth",
+      "super express passport timeline"
+    ],
+    "content": "The official service level agreements (SLAs) inside Bangladesh outline three delivery tiers: Regular (15 working days / 21 calendar days), Express (7 working days / 10 calendar days), and Super Express (2 working days). In February 2025, the Ministry of Home Affairs relaxed pre-issuance police verification, tying clearance directly to online National Identity (NID) verification [FLAG: VERIFY_2026]. Despite this official policy, the 2026 ground truth diverges significantly. Regular applications often face delays of 25 to 35 calendar days, especially in regional passport offices (RPOs) outside Dhaka, due to batch shipment limits and local administrative backlogs [FLAG: PRACTICE_VS_POLICY]. Express applications generally take 12 to 18 days due to personalization queue bottlenecks. Super Express, which officially takes 2 days and requires in-person pickup at the Divisional Passport and Visa Office in Agargaon, Dhaka, regularly suffers delays of 3 to 5 days if the Automated Fingerprint/Biometric Identification System (AFIS/ABIS) triggers a match or mismatch warning [FLAG: NEEDS_SOURCE]. Furthermore, overseas Bangladesh Missions do not offer Super Express; their Express tier takes 3 to 4 weeks, and Regular takes 5 to 6 weeks, heavily dependent on diplomatic dispatch routes.",
+    "key_terms_bengali": [
+      "ই-পাসপোর্ট",
+      "ডেলিভারি সময়সীমা",
+      "জরুরি পাসপোর্ট",
+      "পুলিশ ভেরিফিকেশন"
+    ],
+    "key_terms_english": [
+      "e-Passport",
+      "delivery timeline",
+      "super express",
+      "police verification"
+    ],
+    "confidence_level": "high",
+    "source_urls": [
+      "https://www.epassport.gov.bd/"
+    ],
+    "flags": [
+      "[FLAG: VERIFY_2026]",
+      "[FLAG: PRACTICE_VS_POLICY]",
+      "[FLAG: NEEDS_SOURCE]"
+    ]
+  },
+  {
+    "chunk_id": "section_9_pro_tips_1",
+    "chunk_type": "advisory",
+    "section_header": "Section 9: Pro Tips",
+    "intent_tags": [
+      "e-passport website timing hack",
+      "rpo queue dynamics",
+      "staff discretion passport office"
+    ],
+    "content": "Navigating the e-passport pipeline requires tactical timing. The official portal (epassport.gov.bd) is notorious for server time-outs during business hours [FLAG: VERIFY_2026]. The most effective timing hack is filling applications between 11:30 PM and 5:00 AM BST when traffic drops and the payment gateway integration (EkPay, DGePay) operates smoothly. At Regional Passport Offices (RPOs), official appointment times are widely ignored [FLAG: PRACTICE_VS_POLICY]. The optimal queue strategy is to arrive at the RPO by 7:15 AM to secure an early token, bypass the massive mid-day rush, and ensure biometric enrollment before lunchtime. Managing staff discretion is a key bottleneck. Counter officers frequently reject files for trivial spelling variations in permanent addresses compared to NID. To circumvent this arbitrary friction, applicants should carry physical copies of their online NID verification, active academic credentials, and, if applicable, a professional certificate. If faced with a hostile rejection threat, politely demand a direct referral to the RPO's Assistant Director (AD). ADs hold system override credentials to bypass non-critical field mismatches and authorize enrollment without requiring a full re-application [FLAG: NEEDS_SOURCE].",
+    "key_terms_bengali": [
+      "সার্ভার সমস্যা",
+      "আঞ্চলিক পাসপোর্ট অফিস",
+      "অনলাইন পেমেন্ট",
+      "সহকারী পরিচালক"
+    ],
+    "key_terms_english": [
+      "server timeout",
+      "Regional Passport Office",
+      "token system",
+      "Assistant Director"
+    ],
+    "confidence_level": "high",
+    "source_urls": [
+      "https://www.epassport.gov.bd/"
+    ],
+    "flags": [
+      "[FLAG: VERIFY_2026]",
+      "[FLAG: PRACTICE_VS_POLICY]",
+      "[FLAG: NEEDS_SOURCE]"
+    ]
+  },
+  {
+    "chunk_id": "section_10_fraud_scams_1",
+    "chunk_type": "security_advisory",
+    "section_header": "Section 10: Fraud & Scams",
+    "intent_tags": [
+      "passport dalal scams bangladesh",
+      "extortion amounts BDT",
+      "reporting passport corruption"
+    ],
+    "content": "Despite structural digitalization, 'Dalal' (broker) networks remain active around Regional Passport Offices (RPOs). Common intermediary tactics include promising artificial queue-skipping, guarantees of bypassing AFIS/ABIS verification blocks, and expedited delivery [FLAG: PRACTICE_VS_POLICY]. Dalals typically collude with low-level desk staff or Ansar guards to control physical access. Exact extortion amounts in BDT fluctuate based on urgency: line-skipping at the biometric stage costs 1,500 to 3,000 BDT; resolving an administrative 'Pending' status inside the backend database is priced between 8,000 and 15,000 BDT [FLAG: NEEDS_SOURCE]. Despite the February 2025 elimination of pre-issuance police verification for standard NID-linked applicants, rogue field agents still demand 2,000 to 5,000 BDT under the guise of 'confidential background clearances' [FLAG: VERIFY_2026]. To report extortion, citizens should avoid RPO helpdesks (which often protect colluding staff) and submit evidence directly to the Anti-Corruption Commission (ACC) via the 106 hotline or file a formal complaint with the Department of Immigration and Passports (DIP) Vigilance Cell in Dhaka.",
+    "key_terms_bengali": [
+      "দালাল চক্র",
+      "দুর্নীতি",
+      "দুদক ১০৬",
+      "অতিরিক্ত অর্থ আদায়"
+    ],
+    "key_terms_english": [
+      "broker network",
+      "extortion",
+      "Anti-Corruption Commission",
+      "vigilance cell"
+    ],
+    "confidence_level": "high",
+    "source_urls": [
+      "https://www.dip.gov.bd/"
+    ],
+    "flags": [
+      "[FLAG: PRACTICE_VS_POLICY]",
+      "[FLAG: NEEDS_SOURCE]",
+      "[FLAG: VERIFY_2026]"
+    ]
+  },
+  {
+    "chunk_id": "section_11_training_sop_1",
+    "chunk_type": "training_sop",
+    "section_header": "Section 11: Training",
+    "intent_tags": [
+      "conversational bengali passport qa",
+      "training scenario beginner complex",
+      "passport office customer service"
+    ],
+    "content": "Scenario 1 (Beginner Case - First Time Application & Police Verification):\nআবেদনকারী: \"ভাই, আমার বয়স ২২ বছর। আমি প্রথমবার ই-পাসপোর্ট করতে চাই। আমার কি কি কাগজ লাগবে আর পুলিশ ভেরিফিকেশন কি লাগবে?\"\nকর্মকর্তা: \"আপনার বয়স ২০ বছরের বেশি থাকায় আবশ্যিকভাবে আসল জাতীয় পরিচয়পত্র (NID) এবং অনলাইন আবেদনপত্রের প্রিন্ট কপি সাথে আনতে হবে। ২০২৫ সালের নতুন সরকারি নিয়ম অনুযায়ী, যদি আপনার NID অনলাইন ডাটাবেজে সঠিকভাবে যাচাই করা যায়, তবে কোনো পুলিশ ভেরিফিকেশনের প্রয়োজন হবে না [FLAG: VERIFY_2026]। ৫ বছর মেয়াদের জন্য ৪,০২৫ টাকা এবং ১০ বছরের জন্য ৫,৭৫০ টাকা ব্যাংকে জমা দিয়ে রশিদটি সাথে নিয়ে আসবেন।\"\n\nScenario 2 (Complex Case - MRP to e-Passport Name Mismatch):\nআবেদনকারী: \"আমার আগের এমআরপি পাসপোর্টে নাম ছিল Mohammad, কিন্তু এনআইডিতে আছে Md. এখন ই-পাসপোর্ট করার সময় কোনটা লিখব?\"\nকর্মকর্তা: \"ই-পাসপোর্ট করতে হলে অবশ্যই জাতীয় পরিচয়পত্রের (NID) তথ্য অনুযায়ী ফর্ম পূরণ করতে হবে। আগের এমআরপি-র সাথে নামের আংশিক অমিল থাকলে আপনাকে এনআইডি অনুযায়ী ফর্ম পূরণ করে সাথে পূর্ববর্তী পাসপোর্ট ও পাসপোর্ট সংশোধনের একটি অঙ্গীকারনামা (Declaration Form) জমা দিতে হবে [FLAG: PRACTICE_VS_POLICY]। এটি পাসপোর্ট অফিসের সহকারী পরিচালকের অনুমোদনে সরাসরি সংশোধন করা সম্ভব [FLAG: NEEDS_SOURCE]।\"",
+    "key_terms_bengali": [
+      "জাতীয় পরিচয়পত্র",
+      "অঙ্গীকারনামা",
+      "নাম সংশোধন",
+      "এমআরপি টু ই-পাসপোর্ট"
+    ],
+    "key_terms_english": [
+      "National Identity Card",
+      "Declaration Form",
+      "name mismatch",
+      "MRP reissue"
+    ],
+    "confidence_level": "high",
+    "source_urls": [
+      "https://www.epassport.gov.bd/"
+    ],
+    "flags": [
+      "[FLAG: VERIFY_2026]",
+      "[FLAG: PRACTICE_VS_POLICY]",
+      "[FLAG: NEEDS_SOURCE]"
+    ]
+  },
+  {
+    "chunk_id": "section_11_training_sop_2",
+    "chunk_type": "training_sop",
+    "section_header": "Section 11: Training",
+    "intent_tags": [
+      "conversational bengali passport qa",
+      "mistake correction special case fraud prevention"
+    ],
+    "content": "Scenario 3 (Mistake Rectification):\nআবেদনকারী: \"আমি ভুলে অনলাইনে আবেদন করার সময় ভুল আরপিও (RPO) সিলেক্ট করেছি, পেমেন্টও হয়ে গেছে। এখন কি করব?\"\nকর্মকর্তা: \"পাসপোর্ট ফি নষ্ট হবে না। আপনি পূর্বের এ-চালান (A-Challan) নম্বরটি ব্যবহার করে সঠিক আরপিও নির্বাচন করে একটি নতুন অনলাইন আবেদন পূরণ করুন। বায়োমেট্রিক দেওয়ার সময় কাউন্টারে এই ফি সমন্বয় করা যাবে [FLAG: PRACTICE_VS_POLICY]।\"\n\nScenario 4 (Special-Case - Minor Applicant):\nআবেদনকারী: \"আমার ৭ বছরের বাচ্চার পাসপোর্ট করতে কি কি লাগবে?\"\nকর্মকর্তা: \"বাচ্চাদের জন্য ১৭-ডিজিটের অনলাইন ইংরেজি জন্ম নিবন্ধন সনদ (BRC) এবং পিতা-মাতার এনআইডি (NID)-র কপি বাধ্যতামূলক। ১৮ বছরের কম বয়সীদের জন্য পাসপোর্ট কেবল ৫ বছর মেয়াদী ও ৪৮ পৃষ্ঠার হবে [FLAG: VERIFY_2026]।\"\n\nScenario 5 (Fraud Prevention):\nআবেদনকারী: \"পাসপোর্ট অফিসের বাইরে একজন বলল ৮,০০০ টাকা দিলে পুলিশ ভেরিফিকেশন ছাড়া দ্রুত পাসপোর্ট দিবে, আমি কি তাকে বিশ্বাস করব?\"\nকর্মকর্তা: \"কখনোই না! ২০২৫ সাল থেকে সরকারি নিয়মেই অনলাইন এনআইডি ভেরিফিকেশনের মাধ্যমে পুলিশ ভেরিফিকেশন বন্ধ করা হয়েছে [FLAG: VERIFY_2026]। দালালের এই দাবি সম্পূর্ণ ভুয়া। কোনো অনিয়ম দেখলে সরাসরি সহকারী পরিচালককে জানান অথবা দুদকের ১০৬ নম্বরে কল করুন [FLAG: NEEDS_SOURCE]।\"",
+    "key_terms_bengali": [
+      "এ-চালান",
+      "অনলাইন জন্ম নিবন্ধন",
+      "দালাল প্রতিরোধ",
+      "ভুল আরপিও"
+    ],
+    "key_terms_english": [
+      "A-Challan",
+      "Birth Registration Certificate",
+      "fraud prevention",
+      "wrong RPO"
+    ],
+    "confidence_level": "high",
+    "source_urls": [
+      "https://www.epassport.gov.bd/"
+    ],
+    "flags": [
+      "[FLAG: PRACTICE_VS_POLICY]",
+      "[FLAG: VERIFY_2026]",
+      "[FLAG: NEEDS_SOURCE]"
+    ]
+  },
+  {
+    "chunk_id": "section_12_dependencies_1",
+    "chunk_type": "system_dependencies",
+    "section_header": "Section 12: Dependencies",
+    "intent_tags": [
+      "nid bdris correction dependencies",
+      "cascading passport delays",
+      "birth certificate synchronization"
+    ],
+    "content": "The e-passport architecture is highly dependent on real-time API integrations with the National Identity (NID) database of the Election Commission and the Birth Registration Information System (BDRIS) under the Local Government Division. A critical cascading delay occurs when an applicant files an e-passport application while having an active, unresolved NID correction request. During enrollment, the e-passport verification gateway queries the NID database. If the NID record is flagged as 'Under Process' or suspended, the e-passport system automatically halts the biometric step, throwing a verification failure error [FLAG: VERIFY_2026]. Similarly, minor applicants relying on BDRIS certificates experience significant friction. If the localized Union Parishad or City Corporation failed to sync the 17-digit English Birth Registration Certificate to the central BDRIS database, the biometric counter cannot pull the record, leading to immediate rejection [FLAG: PRACTICE_VS_POLICY]. The only functional workaround is to ensure that all NID or BDRIS corrections are 100% processed and fully verified via public online portals before initiating the e-passport application. Trying to force enrollment with a 'pending' correction receipt inevitably locks the passport application in an endless administrative loop [FLAG: NEEDS_SOURCE].",
+    "key_terms_bengali": [
+      "নির্বাচন কমিশন",
+      "এনআইডি ডাটাবেজ",
+      "জন্ম নিবন্ধন সিস্টেম",
+      "সিস্টেম ইন্টিগ্রেশন"
+    ],
+    "key_terms_english": [
+      "Election Commission",
+      "NID database",
+      "BDRIS",
+      "cascading delay"
+    ],
+    "confidence_level": "high",
+    "source_urls": [
+      "http://bdris.gov.bd/"
+    ],
+    "flags": [
+      "[FLAG: VERIFY_2026]",
+      "[FLAG: PRACTICE_VS_POLICY]",
+      "[FLAG: NEEDS_SOURCE]"
+    ]
+  },
+  {
+    "chunk_id": "section_13_corrections_1",
+    "chunk_type": "procedural_guide",
+    "section_header": "Section 13: Corrections",
+    "intent_tags": [
+      "epassport correction rules 2026",
+      "marital status amendment",
+      "legal identity alignment bangladesh"
+    ],
+    "content": "Correcting errors on an already issued e-passport or aligning older MRP data to NID is governed by strict regulatory protocols. If an error is printed due to a backend system glitch (DIP error), the applicant can apply for a free reissue, provided they present the original submitted application printout showing they entered the correct data. Marital status amendments (e.g., updating to 'Married' or 'Divorced') require a legally registered Nikahnama or Divorce Decree. These documents must be translated into English and formally attested by the Ministry of Law and the Ministry of Foreign Affairs; otherwise, counter-officers will arbitrarily reject the update [FLAG: PRACTICE_VS_POLICY]. For broader legal identity re-alignment (modifying age, name, or parents' names to match NID), the security services directive issued in February 2025 significantly simplified the process, allowing corrections directly in line with verified online NID records [FLAG: VERIFY_2026]. To execute this, the applicant must complete the standard Reissue/Information Alteration Form, submit a signed self-declaration undertaking (Angikar-nama) acknowledging the change, and provide their physical NID and previous passport [FLAG: NEEDS_SOURCE].",
+    "key_terms_bengali": [
+      "পাসপোর্ট সংশোধন",
+      "নিকাহনামা",
+      "বিবাহবিচ্ছেদ সনদ",
+      "অঙ্গীকারনামা"
+    ],
+    "key_terms_english": [
+      "passport correction",
+      "Nikahnama",
+      "divorce decree",
+      "identity re-alignment"
+    ],
+    "confidence_level": "high",
+    "source_urls": [
+      "https://www.dip.gov.bd/"
+    ],
+    "flags": [
+      "[FLAG: PRACTICE_VS_POLICY]",
+      "[FLAG: VERIFY_2026]",
+      "[FLAG: NEEDS_SOURCE]"
+    ]
+  }
+]

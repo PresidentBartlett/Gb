@@ -1,0 +1,50 @@
+[
+  {
+    "chunk_id": "bdris_2026_legal_basis",
+    "chunk_type": "legal_foundation",
+    "section_header": "SECTION 1: LEGAL BASIS",
+    "intent_tags": ["legal_mandate", "statutory_act", "17_digit_requirement", "lgd_circular"],
+    "content": "### Statutory Framework & Digitization Mandate\nThe statutory foundation of the birth and death registry in Bangladesh is established under the Birth and Death Registration Act 2004 (amended in 2013). This legislation mandates the universal registration of all births and deaths occurring within the sovereign territory of Bangladesh, as well as those of citizens residing abroad.\n\nUnder recent Local Government Division (LGD) directives, the state has phased out manual certificates in favor of a centralized online ledger known as the Birth & Death Registration Information System (BDRIS) [FLAG: VERIFY_2026]. Every citizen is legally required to obtain a 17-digit digitized bilingual (English and Bengali) birth certificate. This 17-digit Birth Registration Number (BRN) serves as the primary digital identifier. Without it, individuals are legally barred from critical civic services, including school admission, passport issuance, driving license acquisition, utility connection, land registration, and NID registration.\n\nDespite the strict legal mandate, field offices frequently issue paper printouts without complete database synchronization [FLAG: PRACTICE_VS_POLICY]. This practice creates a gap between physical ownership of a certificate and real-time digital verifiability on the BDRIS online portal.",
+    "key_terms_bengali": ["জন্ম ও মৃত্যু নিবন্ধন আইন", "১৭ ডিজিট", "জন্ম নিবন্ধন নম্বর", "স্থানীয় সরকার বিভাগ"],
+    "key_terms_english": ["Birth and Death Registration Act 2004", "17-digit birth certificate", "Local Government Division", "BDRIS"],
+    "confidence_level": "high",
+    "source_urls": ["https://bdris.gov.bd", "http://laws.bangladesh.gov.bd"],
+    "flags": ["VERIFY_2026", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "bdris_2026_issuing_authority_matrix",
+    "chunk_type": "jurisdictional_rules",
+    "section_header": "SECTION 2: ISSUING AUTHORITY MATRIX",
+    "intent_tags": ["administrative_hierarchy", "org", "union_parishad_downtime", "bureaucracy"],
+    "content": "### Administrative Hierarchy and System Downtimes\nThe operational architecture of the Birth & Death Registration Information System (BDRIS) is organized hierarchically. At the apex sits the Office of the Registrar General (ORG), Birth and Death Registration, operating under the Local Government Division (LGD) of the Ministry of Local Government, Rural Development and Co-operatives.\n\nThe authority to record data and print certificates is delegated to regional entities:\n1. City Corporation Zonal Offices (for urban areas)\n2. Pourashavas (Municipalities)\n3. Union Parishads (the lowest tier of rural local government)\n4. Cantonment Boards\n5. Bangladesh Diplomatic Missions (for overseas citizens)\n\nAt the grass-roots level, particularly at Union Parishad counters, the registration system suffers from chronic bottlenecks. While policy dictates instant data entry, localized server downtimes, database access errors, and electricity outages frequently paralyze operations [FLAG: PRACTICE_VS_POLICY]. During BDRIS maintenance or unexpected server crashes, regional staff often unilaterally reject applicants or mandate third-party computer vendors (\"cyber-cafés\") to complete entries at an inflated cost [FLAG: PRACTICE_VS_POLICY]. Official guidelines require direct service at designated counters without intermediation, but backend technical failures make digital citizen counters practically inaccessible.",
+    "key_terms_bengali": ["রেজিস্ট্রার জেনারেলের কার্যালয়", "ইউনিয়ন পরিষদ", "পৌরসভা", "সার্ভার ডাউন"],
+    "key_terms_english": ["Office of the Registrar General", "Union Parishad", "Pourashava", "Server Downtime"],
+    "confidence_level": "high",
+    "source_urls": ["https://bdris.gov.bd"],
+    "flags": ["PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "bdris_2026_eligibility_identity_gates",
+    "chunk_type": "eligibility_requirements",
+    "section_header": "SECTION 3: ELIGIBILITY & IDENTITY GATES",
+    "intent_tags": ["registration_windows", "parental_nid_dependency", "system_deadlock", "api_verification"],
+    "content": "### Registration Windows and Interoperability Deadlocks\nThe Birth and Death Registration Act 2004 establishes a strict 45-day window post-birth for cost-free, mandatory registration. If delayed past 45 days, applicants face escalations in fees and evidentiary requirements. Registrations delayed by over 5 years require physical clearance from the Upazila Nirbahi Officer (UNO) or an authorized executive magistrate [FLAG: VERIFY_2026].\n\nA significant operational challenge lies in the systemic verification gate of the BDRIS API, which cross-references the National Identity (NID) database of the Bangladesh Election Commission. Under standard protocols, registering a child born after 2001 requires the 17-digit digital birth certificates and verified NIDs of both parents.\n\nThis requirement triggers a systemic deadlock if parents possess only the legacy 13-digit NIDs (issued prior to digitization). The BDRIS portal cannot automatically parse legacy 13-digit NIDs, causing immediate API verification failures. To resolve this, parents must first apply to update their 13-digit NIDs to 10-digit smart cards or 17-digit formats at the Election Commission [FLAG: NEEDS_SOURCE]. In everyday practice, citizens are often forced to pay informal \"speed fees\" to administrative desks to manually bypass these validation rules, directly contradicting the digital-first policy [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": ["৪৫ দিন", "এনআইডি লিংক", "১৩ ডিজিট এনআইডি", "ডিজিটাল ডেডলক"],
+    "key_terms_english": ["45-day window", "NID integration", "Legacy 13-digit NID", "BDRIS API deadlock"],
+    "confidence_level": "high",
+    "source_urls": ["https://bdris.gov.bd", "https://services.nidw.gov.bd"],
+    "flags": ["VERIFY_2026", "NEEDS_SOURCE", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "bdris_2026_document_checklist",
+    "chunk_type": "document_checklist",
+    "section_header": "SECTION 4: DOCUMENT CHECKLIST",
+    "intent_tags": ["newborn_checklist", "adult_registration", "data_correction", "evidence_requirements"],
+    "content": "### Verification Checklist and Correctional Protocols\nTo obtain or correct birth registrations within BDRIS, applicants must submit strict evidence categorized by age and registration type:\n\n1. **Newborn Registration (<45 Days):**\n- EPI (Expanded Programme on Immunization) card or clinic card.\n- Hospital discharge slip bearing the doctor's seal and signature.\n- Verifiable 17-digit digital birth certificates and NID copies of parents.\n\n2. **Adult Retroactive Registration (>5 Years):**\n- Primary school certificate (PSC), Junior School Certificate (JSC), or SSC certificate.\n- Online-verifiable NID copy.\n- Certified land tax receipt, utility bill, or holding tax receipt to verify permanent address.\n\n3. **Data Correction Applications:**\n- Category A (Minor spelling): Online parental records or passport copies matching the spelling.\n- Category B (Major age/name adjustments): Magistrate affidavits, medical board verification certificates, and SSC transcripts.\n\nOfficial LGD circulars mandate that once proper documents are uploaded, officers must approve the changes within specified SLAs [FLAG: VERIFY_2026]. In reality, Ward Councilor and Union Parishad offices often reject valid school transcripts arbitrarily, forcing citizens to acquire notary services or hand-deliver files to secure manual approvals [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": ["ইপিআই কার্ড", "এসএসসি সনদ", "তথ্য সংশোধন", "এফিডেভিট"],
+    "key_terms_english": ["EPI Card", "SSC Certificate", "Data Correction", "Magistrate Affidavit"],
+    "confidence_level": "high",
+    "source_urls": ["https://bdris.gov.bd", "https://everify.bdris.gov.bd"],
+    "flags": ["VERIFY_2026", "PRACTICE_VS_POLICY"]
+  }
+]

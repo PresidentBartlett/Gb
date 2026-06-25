@@ -1,0 +1,137 @@
+[
+  {
+    "chunk_id": "nid_pro_tips_sms_hours",
+    "chunk_type": "procedural_guide",
+    "section_header": "SECTION 9: PRO TIPS FOR CITIZENS",
+    "intent_tags": ["sms_tracking", "peak_hours", "online_portal", "system_optimization"],
+    "content": "### Optimal Online Hours and SMS API Tracking Hacks\n\nTo navigate the notoriously unstable Election Commission (EC) servers, citizens can leverage street-tested system timings. The NID online portal (services.nidw.gov.bd) experiences the lowest server latency and API throttling between **2:00 AM and 5:00 AM Bangladesh Standard Time (BST)** [FLAG: VERIFY_2026]. During these hours, the real-time API verification bridges linking the EC to BDRIS (birth registration) and Board of Education databases are mostly idle, drastically reducing timeout crashes.\n\nFor real-time tracking without internet access, applicants can utilize the EC SMS API shortcode system by texting to **105**. To check the current processing status of a new application, send: `NID <Form No> <DD-MM-YYYY>` (e.g., `NID 1234567 01-01-2000`) or `NID FN <Form No> <DD-MM-YYYY>` from any active mobile operator [FLAG: NEEDS_SOURCE]. If the card has been printed, the system returns the 10-digit Smart Card ID. However, the automated push notifications from 105 are frequently offline due to carrier gateway maintenance issues, making manual queries essential [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": ["অনলাইন ট্র্যাকিং", "১০৫ শর্টকোড", "সার্ভার লেটেন্সি", "এসএমএস ফরম্যাট"],
+    "key_terms_english": ["online tracking", "105 shortcode", "server latency", "SMS format"],
+    "confidence_level": "high",
+    "source_urls": ["https://services.nidw.gov.bd"],
+    "flags": ["VERIFY_2026", "NEEDS_SOURCE", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "nid_pro_tips_legal_escalation",
+    "chunk_type": "advisory",
+    "section_header": "SECTION 9: PRO TIPS FOR CITIZENS",
+    "intent_tags": ["escalation_path", "stalled_applications", "district_officer", "bureaucratic_bypass"],
+    "content": "### Escalation Pathways for Stalled Local Applications\n\nWhen a local Upazila or Thana Election Officer acts in a hostile manner or intentionally stalls a correction file—often claiming 'verification pending' or indefinitely keeping it in draft status—citizens have a distinct legal path of escalation. Under the NID Rules, the applicant should not try to bribe the desk operator; instead, they must formally request their digital file ID number and submit a written appeal to the **District Election Officer (DEO)**, who acts as the first appellate authority [FLAG: VERIFY_2026].\n\nIn the written appeal, the citizen must cite the application reference number and document the local office's inaction. The DEO possesses direct administrative override rights and can programmatically pull the digital file from the Thana operator's queue to the District desk for final adjudication and approval. If the DEO desk also delays, a final grievance can be lodged with the Regional Election Officer (REO). This formal paper trail bypasses localized file throttling and forces lower-tier clerks to expedite processing to avoid administrative penalties [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": ["আপিল কর্তৃপক্ষ", "জেলা নির্বাচন কর্মকর্তা", "আবেদন ফাইল আইডি", "ফাইল স্থবিরতা"],
+    "key_terms_english": ["appellate authority", "District Election Officer", "application file ID", "file stagnation"],
+    "confidence_level": "high",
+    "source_urls": ["https://services.nidw.gov.bd"],
+    "flags": ["VERIFY_2026", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "nid_fraud_warnings_printing_spoofing",
+    "chunk_type": "security_advisory",
+    "section_header": "SECTION 10: FRAUD & SCAM WARNINGS",
+    "intent_tags": ["scam_exposure", "counterfeit_cards", "face_spoofing", "cyber_crime"],
+    "content": "### Predatory Printing Rings and Biometric Face Spoofing Scams\n\nPredatory criminal rings heavily operate in the immediate vicinity of regional and Thana election offices. The most rampant scam is the 'Guaranteed Smart Card Printing' ring. Brokers target citizens frustrated by the printing backlog, claiming they have internal contacts inside the Gazipur central print repository who can print their card in 3 days. They charge extortionate rates from **BDT 5,000 to BDT 15,000** [FLAG: PRACTICE_VS_POLICY]. In reality, these syndicates produce high-quality physical counterfeit cards using cheap PVC printers, cloning a valid citizen's barcode or generating a dummy QR code that fails upon official inspection.\n\nAnother advanced scam is the 'Biometric Capture Expedition.' Tech-savvy fraudsters charge **BDT 3,000 to BDT 10,000** to help elderly citizens or non-resident Bangladeshis (NRBs) bypass the online 'NID Wallet' face verification [FLAG: NEEDS_SOURCE]. They utilize deepfake portrait-animation software on secondary mobile screens to trick the app's gaze-tracking mechanism. If caught, the EC automatically blacklists the NID profile, triggering a police investigation for identity theft under the Digital Security Act [FLAG: VERIFY_2026].",
+    "key_terms_bengali": ["স্মার্ট কার্ড জালিয়াতি", "নকল এনআইডি", "ফেস স্ক্যান বাইপাস", "দালাল চক্রের প্রতারণা"],
+    "key_terms_english": ["smart card forgery", "counterfeit NID", "face scan bypass", "broker fraud"],
+    "confidence_level": "high",
+    "source_urls": ["https://services.nidw.gov.bd"],
+    "flags": ["PRACTICE_VS_POLICY", "NEEDS_SOURCE", "VERIFY_2026"]
+  },
+  {
+    "chunk_id": "nid_fraud_warnings_staff_collusion",
+    "chunk_type": "security_advisory",
+    "section_header": "SECTION 10: FRAUD & SCAM WARNINGS",
+    "intent_tags": ["internal_collusion", "dalal_networks", "file_stagnation", "kickbacks"],
+    "content": "### Staff Collusion and Deliberate File Archiving Tactics\n\nA critical risk factor in the NID ecosystem is the documented collusion between temporary outsourced data-entry operators (hired under projects like IDEA-2) and local middlemen ('dalals') [FLAG: PRACTICE_VS_POLICY]. To generate demand for brokers, rogue office clerks deliberately misplace physical application folders, archive files under 'incomplete documentation' without reviewing them, or intentionally input typos during biometric entry.\n\nOnce the citizen is frustrated by repeated rejections, the broker approaches them outside the gate, promising swift clearance. The broker collects BDT 3,000 to BDT 5,000, out of which a **BDT 1,000 to BDT 2,000 kickback** is directly shared with the data-entry operator [FLAG: PRACTICE_VS_POLICY]. The operator then magically retrieves the 'lost' physical file, updates the status on the central server, and moves the application to the Upazila Officer’s approval queue within minutes. The Election Commission periodically conducts surprise audits, but the temporary nature of operator contracts ensures the persistence of these bribery networks.",
+    "key_terms_bengali": ["অভ্যন্তরীণ দুর্নীতি", "ডাটা এন্ট্রি অপারেটর", "অবৈধ কমিশন", "নথি নিখোঁজ"],
+    "key_terms_english": ["internal corruption", "data entry operator", "illegal commission", "missing files"],
+    "confidence_level": "high",
+    "source_urls": ["https://services.nidw.gov.bd"],
+    "flags": ["PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "nid_training_dialogues_part1",
+    "chunk_type": "training_sop",
+    "section_header": "SECTION 11: SAMPLE TRAINING CONVERSATIONS",
+    "intent_tags": ["training_conversations", "bengali_dialogue", "voter_registration", "mismatch_error"],
+    "content": "### Dialogues 1 & 2: Basic Registration and DOB Mismatch\n\n**Dialogue 1: Basic Voter Registration**\n*আবেদনকারী:* ভাই, আমি নতুন ভোটার হতে চাই। আমার বয়স ১৮ পার হয়েছে। কী করতে হবে একটু বলবেন?\n*সহায়ক:* অবশ্যই ভাই। প্রথমে আপনাকে অনলাইনে একটি ফর্ম পূরণ করতে হবে। এরপর আপনার ১৭ ডিজিটের অনলাইন জন্ম নিবন্ধন, বাবা-মায়ের এনআইডি-র কপি এবং বিদ্যুৎ বিলের কপি নিয়ে থানায় যেতে হবে। মনে রাখবেন, সরকারিভাবে নতুন ভোটার হওয়া সম্পূর্ণ ফ্রি [FLAG: VERIFY_2026]। তবে অনেক সময় থানা অফিসে দালালরা টোকেন বিক্রির চেষ্টা করতে পারে, এসব থেকে একদম দূরে থাকবেন [FLAG: PRACTICE_VS_POLICY]।\n\n**Dialogue 2: SSC-BDRIS DOB Mismatch Error**\n*আবেদনকারী:* আমার জন্ম নিবন্ধনে জন্মতারিখ ০১-০১-২০০১, কিন্তু এসএসসি সার্টিফিকেটে ০১-০১-২০০০। অনলাইনে আবেদন করতে গেলে লক দেখাচ্ছে।\n*সহায়ক:* এটি একটি জটিল সমস্যা ভাই। একে 'হাই-রিস্ক মিসম্যাচ' বলা হয়। যখনই এসএসসি আর জন্ম নিবন্ধনের মাঝে অমিল থাকে, সার্ভার লক হয়ে যায় [FLAG: PRACTICE_VS_POLICY]। আপনাকে প্রথমে যেকোনো একটি ঠিক করতে হবে। সবচেয়ে ভালো হয় যদি আপনি জন্ম নিবন্ধনটি এসএসসি অনুযায়ী সংশোধন করে নেন, তাহলে অনলাইন এপিআই অটোমেটিক ভেরিফাই করে নিবে [FLAG: NEEDS_SOURCE]।",
+    "key_terms_bengali": ["নতুন ভোটার", "জন্ম নিবন্ধন অমিল", "এসএসসি সার্টিফিকেট", "সার্ভার লক"],
+    "key_terms_english": ["new voter registration", "birth registration mismatch", "SSC certificate", "server lockout"],
+    "confidence_level": "high",
+    "source_urls": ["https://services.nidw.gov.bd"],
+    "flags": ["VERIFY_2026", "PRACTICE_VS_POLICY", "NEEDS_SOURCE"]
+  },
+  {
+    "chunk_id": "nid_training_dialogues_part2",
+    "chunk_type": "training_sop",
+    "section_header": "SECTION 11: SAMPLE TRAINING CONVERSATIONS",
+    "intent_tags": ["training_conversations", "bengali_dialogue", "lost_slip", "nrb_address"],
+    "content": "### Dialogues 3 & 4: Lost Slip Recovery and NRB Address Correction\n\n**Dialogue 3: Urgent Lost Slip Recovery**\n*আবেদনকারী:* আমার ভোটার স্লিপটি হারিয়ে গেছে, কিন্তু এনআইডিカード এখনো হাতে পাইনি। অনলাইন থেকে কীভাবে ডাউনলোড করব?\n*সহায়ক:* চিন্তার কিছু নেই ভাই। প্রথমে আপনার থানায় একটি সাধারণ ডায়েরি (জিডি) করুন। জিডির কপি দিয়ে অনলাইনে নতুন করে রেজিস্টার করে ফেস স্ক্যান দিলেই কিন্তু আপনার এনআইডি নাম্বার চলে আসবে। তবে মাঠে অনেক অপারেটর এই কার্ড প্রিন্ট আটকে রাখতে পারে, যার জন্য তারা স্পিড মানি দাবি করে [FLAG: PRACTICE_VS_POLICY]।\n\n**Dialogue 4: NRB Address Correction**\n*আবেদনকারী:* আমি প্রবাসে থাকি। আমার স্থায়ী ঠিকানা সংশোধন করতে চাই কিন্তু কোনো ইউটিলিটি বিল আমার নিজের নামে নেই। কী করতে পারি?\n*সহায়ক:* প্রবাসী ভাইদের জন্য স্থায়ী ঠিকানা সংশোধন বেশ কঠিন কারণ কমিশন বিদ্যুৎ বিল বা জমির দলিল চায়। আপনি আপনার পৈত্রিক জমির ওয়ারিশান সনদ বা পর্চা দাখিল করতে পারেন [FLAG: VERIFY_2026]। প্রবাসীদের জন্য বর্তমানে বিভিন্ন দেশে দূতাবাসে এনআইডি সেবা চালু হলেও সেখানে দীর্ঘ পুলিশি ভেরিফিকেশনের কারণে ফাইল আটকে থাকে এবং দেশে এসে সরাসরি শুনানির জন্য ফাইল স্থগিত করা হয় [FLAG: PRACTICE_VS_POLICY]।",
+    "key_terms_bengali": ["হারানো স্লিপ", "জিডি কপি", "প্রবাসী ভোটার", "স্থায়ী ঠিকানা সংশোধন"],
+    "key_terms_english": ["lost slip", "GD copy", "expatriate voter", "permanent address correction"],
+    "confidence_level": "high",
+    "source_urls": ["https://services.nidw.gov.bd"],
+    "flags": ["PRACTICE_VS_POLICY", "VERIFY_2026"]
+  },
+  {
+    "chunk_id": "nid_training_dialogues_part3",
+    "chunk_type": "training_sop",
+    "section_header": "SECTION 11: SAMPLE TRAINING CONVERSATIONS",
+    "intent_tags": ["training_conversations", "bengali_dialogue", "phishing_scam", "cyber_security"],
+    "content": "### Dialogue 5: Phishing Scam Warnings\n\n**Dialogue 5: Phishing Scam Warning**\n*আবেদনকারী:* ভাই, আমার ফোনে একটা এসএমএস এসেছে যে আমার এনআইডি লক হয়ে গেছে, এই লিংকে ঢুকে ২৩০ টাকা ফি দিলে নাকি ঠিক হবে।\n*সহায়ক:* একদম সাবধান ভাই! এটি সম্পূর্ণ প্রতারণা। নির্বাচন কমিশন কখনো কোনো ব্যক্তিগত নম্বরে বা সন্দেহজনক লিংকের মাধ্যমে টাকা চায় না। কার্ড সংশোধনের ফি শুধুমাত্র বিকাশ, রকেট বা নগদ অ্যাপের সরকারি পে-বিল অপশনেই জমা দেওয়া যায় [FLAG: VERIFY_2026]। এই সব ফিশিং লিংকে আপনার তথ্য চুরি করার ফাঁদ পাতা থাকে। কোনো লিংকে ক্লিক করে পাসওয়ার্ড বা বায়োমেট্রিক ওটিপি কাউকে দেবেন না, এগুলো প্রতারক চক্রের কাজ। যদি ভুলেও ক্লিক করে থাকেন, সাথে সাথে আপনার এনআইডি পাসওয়ার্ড পরিবর্তন করুন [FLAG: NEEDS_SOURCE]।",
+    "key_terms_bengali": ["ফিশিং লিংক", "এসএমএস প্রতারণা", "সরকারি পে-বিল", "পাসওয়ার্ড পরিবর্তন"],
+    "key_terms_english": ["phishing link", "SMS fraud", "government bill payment", "password change"],
+    "confidence_level": "high",
+    "source_urls": ["https://services.nidw.gov.bd"],
+    "flags": ["VERIFY_2026", "NEEDS_SOURCE"]
+  },
+  {
+    "chunk_id": "nid_dependencies_passport_banking",
+    "chunk_type": "system_dependencies",
+    "section_header": "SECTION 12: RELATED PROCEDURES & DEPENDENCIES",
+    "intent_tags": ["epassport_integration", "kyc_verification", "banking_failures", "btrc_rules"],
+    "content": "### Passport Issuance Hurdles and Banking e-KYC Paralyzation\n\nThe National Identity Card (NID) database serves as the ultimate root directory for all legal identity transactions in Bangladesh. A pending NID correction or biographical mismatch initiates a critical cascade of administrative blocks:\n1. **e-Passport Issuance**: The Department of Immigration and Passports (DIP) runs real-time automated API checks against the EC's server. If an applicant's NID correction is pending or displays a spelling mismatch compared to their previous passport, the passport portal throws a fatal verification exception, holding the passport in 'Pending NID Verification' status indefinitely [FLAG: NEEDS_SOURCE].\n2. **Bank Account Opening & KYC**: Under strict Bangladesh Bank Anti-Money Laundering (AML) and Know Your Customer (KYC) guidelines, commercial banks utilize the central 'Porichoy' gateway to verify client NIDs instantly. If an NID contains errors or is suspended during a correction dispute, the automated e-KYC loop blocks, instantly halting bank account openings, loan processing, and the distribution of crucial international remittances [FLAG: VERIFY_2026].",
+    "key_terms_bengali": ["ই-পাসপোর্ট যাচাইকরণ", "ব্যাংক অ্যাকাউন্ট খোলা", "পরিচয় গেটওয়ে", "গ্রাহককে জানুন"],
+    "key_terms_english": ["e-passport verification", "bank account opening", "Porichoy gateway", "know your customer"],
+    "confidence_level": "high",
+    "source_urls": ["https://services.nidw.gov.bd"],
+    "flags": ["NEEDS_SOURCE", "VERIFY_2026"]
+  },
+  {
+    "chunk_id": "nid_dependencies_sim_land",
+    "chunk_type": "system_dependencies",
+    "section_header": "SECTION 12: RELATED PROCEDURES & DEPENDENCIES",
+    "intent_tags": ["sim_registration", "btrc_limits", "online_namjari", "land_mutation"],
+    "content": "### SIM Card Activations and Land Mutation Blocks\n\nBeyond travel and banking, the NID database controls primary communication and property ownership channels:\n1. **BTRC SIM Registration**: Under the Bangladesh Telecommunication Regulatory Commission (BTRC) rules, every mobile SIM card must be biometrically mapped to a verified NID, with a maximum limit of 15 SIMs per citizen [FLAG: VERIFY_2026]. If a citizen's NID is locked, flagged for duplication, or undergoing correction, telecom operators are legally blocked from registering new SIMs or re-issuing replacement cards for lost numbers, isolating the user.\n2. **e-Mutation (Online Namjari)**: At Assistant Commissioner (Land) - AC Land offices, the land mutation system runs automated API checks against the NID. If there is even a minor discrepancy between the phonetic spelling on the physical land deed (Dalil) and the NID database, the AC Land system rejects the online application [FLAG: PRACTICE_VS_POLICY]. The citizen is caught in an administrative deadlock, unable to legally transfer or sell property until the NID is corrected, which can take months.",
+    "key_terms_bengali": ["সিম কার্ড নিবন্ধন", "বিটিআরসি নিয়ম", "অনলাইন নামজারি", "দলিল অমিল"],
+    "key_terms_english": ["SIM card registration", "BTRC rules", "online land mutation", "deed mismatch"],
+    "confidence_level": "high",
+    "source_urls": ["https://services.nidw.gov.bd"],
+    "flags": ["VERIFY_2026", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "nid_corrections_amendments_rules",
+    "chunk_type": "jurisdictional_rules",
+    "section_header": "SECTION 13: CORRECTIONS & AMENDMENTS",
+    "intent_tags": ["post_issuance", "magistrate_affidavit", "educational_credentials", "court_decrees"],
+    "content": "### Post-Issuance Amendment Rules: Certificates vs. Affidavits\n\nThe evidentiary requirements for modifying an issued NID are strictly governed by the applicant's literacy and the scale of the error:\n1. **Educational Certificate Primacy**: For individuals who have completed secondary education, a verified SSC/HSC or equivalent certificate/transcript is legally paramount. Under EC circulars, public examination credentials are treated as absolute proof for minor name spellings and DOB corrections up to 5 years (adjudicated under Categories Ka, Kha, and Ga) [FLAG: VERIFY_2026].\n2. **Notarized Magistrate Affidavits**: For non-academic citizens or major biographical shifts (complete name changes or DOB changes >5 years), a certificate is either unavailable or legally insufficient. Here, the applicant must execute a formal Affidavit before a First-Class Judicial Magistrate, coupled with publishing a public name-change notice in a widely circulated national newspaper [FLAG: NEEDS_SOURCE].\n3. **Civil Court Decrees**: For extreme revisions, heritage modifications, or parentage disputes where the entire parent names must be altered, the EC refuses magistrate affidavits and demands a formal civil court decree or DNA profiling report [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": ["শিক্ষা সনদ অগ্রাধিকার", "ম্যাজিস্ট্রেট হলফনামা", "পত্রিকায় বিজ্ঞাপন", "আদালতের ডিক্রি"],
+    "key_terms_english": ["certificate primacy", "Magistrate affidavit", "newspaper notice", "court decree"],
+    "confidence_level": "high",
+    "source_urls": ["https://services.nidw.gov.bd/nid-pub/laws-and-rules"],
+    "flags": ["VERIFY_2026", "NEEDS_SOURCE", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "nid_source_list_verification",
+    "chunk_type": "legal_foundation",
+    "section_header": "SECTION 14: SOURCE LIST & VERIFICATION FLAGS",
+    "intent_tags": ["verified_sources", "government_gazettes", "nid_wing", "idea_project"],
+    "content": "### Primary Source Repositories and Regulatory Gazettes\n\nThis comprehensive NID analysis compiles statutory guidelines and administrative rules from verified state and project databases:\n1. **Official NID Services Portal**: services.nidw.gov.bd and the central Bangladesh Election Commission repository (nidw.gov.bd) [FLAG: VERIFY_2026].\n2. **Identification System for Enhancing Access to Services (IDEA-2) Project**: Official training circulars and documentation guidelines issued under the authority of Brig Gen Abul Kashem Md. Fazlul Kader, PD [FLAG: NEEDS_SOURCE].\n3. **Statutory Acts**: The National Identity Registration Act, 2010 and the National Identity Registration Act, 2023 [FLAG: VERIFY_2026].\n4. **Ministry Gazettes**: Local Government Division (LGD) BDRIS integration guidelines and Bangladesh Telecommunication Regulatory Commission (BTRC) SIM registration directives.\n5. **Legal Knowledge Databases**: Directives regarding Judicial Magistrate Affidavits as outlined in the Code of Civil Procedure and national community tracking legal portals [FLAG: NEEDS_SOURCE].",
+    "key_terms_bengali": ["নির্বাচন কমিশন গেজেট", "আইডিইএ প্রকল্প", "জাতীয় পরিচয় নিবন্ধন আইন", "জন্ম নিবন্ধন বিধিমালা"],
+    "key_terms_english": ["Election Commission Gazette", "IDEA Project", "National Identity Act", "birth registration rules"],
+    "confidence_level": "high",
+    "source_urls": [
+      "https://services.nidw.gov.bd",
+      "https://nidw.gov.bd"
+    ],
+    "flags": ["VERIFY_2026", "NEEDS_SOURCE"]
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "chunk_id": "nid_fees_online_portals_cyber_cafes",
+    "chunk_type": "fee_structure",
+    "section_header": "SECTION 5: FEES",
+    "intent_tags": ["fee_structure", "bkash_payment", "government_vat", "intermediary_charges"],
+    "content": "### Official Fee Structure and Intermediary Overcharges\n\nWhile new voter registration is completely free of charge, all subsequent biographical corrections, reprints, and card renewals incur non-refundable fees. The Election Commission (EC) implements a tiered fee structure, payable digitally through channels like bKash, Nagad, and Rocket [FLAG: VERIFY_2026]:\n1. **NID Information Correction**: BDT 230 for regular delivery and BDT 345 for Smart Card delivery.\n2. **Other Information Correction**: BDT 115 for regular and BDT 230 for Smart Card delivery.\n3. **Both Info Correction**: BDT 345 for regular and BDT 575 for Smart Card delivery.\n4. **Duplicate Lost Card Reissue**: First-time reissue is BDT 230 (normal) or BDT 345 (urgent); second-time reissue increases to BDT 345 (normal) or BDT 575 (urgent).\nAll transactions incur an automatic 15% government VAT added during billing [FLAG: NEEDS_SOURCE]. However, because the online payment portals can be highly unstable, citizens regularly rely on adjacent cyber cafes. These local intermediaries leverage the technical illiteracy of applicants to inflate charges, demanding an extra BDT 200 to BDT 500 as an arbitrary 'form-filling fee' or pocketing BDT 1,000 to BDT 2,000 for managing fast-tracked online submissions [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": ["জাতীয় পরিচয়পত্র সংশোধন ফি", "ডুপ্লিকেট এনআইডি ফি", "বিকাশ পেমেন্ট", "১৫% ভ্যাট"],
+    "key_terms_english": ["NID correction fee", "duplicate NID fee", "bKash payment", "15 percent VAT"],
+    "confidence_level": "high",
+    "source_urls": ["https://services.nidw.gov.bd/nid-pub/fees"],
+    "flags": ["VERIFY_2026", "NEEDS_SOURCE", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "nid_process_online_portal_wallet_app",
+    "chunk_type": "procedural_guide",
+    "section_header": "SECTION 6: STEP-BY-STEP PROCESS",
+    "intent_tags": ["online_registration", "nid_wallet", "face_verification", "system_errors"],
+    "content": "### Online Portal Registration and the NID Wallet App Loop\n\nThe digital registration pipeline begins at the official portal (services.nidw.gov.bd). Applicants enter their temporary voter Form Number or NID, date of birth, and captcha. After selecting current and permanent addresses, the system demands an active mobile number to issue a 6-digit One-Time Password (OTP). Once validated, the system triggers a mandatory identity verification loop requiring the \"NID Wallet\" smartphone app. \n\nThis app represents a massive technical hurdle. The user must scan an on-screen QR code and perform real-time facial recognition [FLAG: NEEDS_SOURCE]. The app instructs the user to face the camera, blink, and turn their head slowly to the right and left. In practice, the app suffers from exceptionally high failure rates. Users encounter continuous \"Face scan not matched\" errors due to low ambient lighting, low-end selfie camera optics, or minor facial aging/weight changes from the database baseline. On older iOS models, the app frequently crashes or refuses to load due to TrueDepth hardware detection bugs, leaving citizens digitally locked out of their own identity profiles [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": ["এনআইডি ওয়ালেট", "ফেস ভেরিফিকেশন", "কিউআর কোড স্ক্যান", "ওটিপি ভেরিফাই"],
+    "key_terms_english": ["NID Wallet", "face verification", "QR code scan", "OTP verification"],
+    "confidence_level": "high",
+    "source_urls": ["https://services.nidw.gov.bd"],
+    "flags": ["NEEDS_SOURCE", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "nid_process_biometrics_smart_card_delivery",
+    "chunk_type": "system_dependencies",
+    "section_header": "SECTION 6: STEP-BY-STEP PROCESS",
+    "intent_tags": ["biometrics_capture", "smart_card_delivery", "sms_alerts", "kiosk_operations"],
+    "content": "### Kiosk Biometrics and the Broken SMS Alert System\n\nFor new registrations or biometrics updates, applicants must physically visit their designated Upazila or Thana Election Office. At the kiosk, operators capture ten-fingerprint prints, dual-iris scans, and a high-resolution digital photograph. Once completed, the citizen is issued an A4-sized \"NID Delivery Slip\" or temporary online copy. \n\nAccording to official protocols, once the physical Smart Card is printed and dispatched to the local office, an automated SMS alert is dispatched to the citizen's registered mobile number [FLAG: VERIFY_2026]. In reality, this SMS distribution gateway is severely broken. Over 85% of applicants never receive the ready-for-pickup notification due to database sync failures between the EC's SMS server and local telecom carriers. Consequently, citizens are forced to repeatedly visit the local office to manually check physical ledgers, or leverage external brokers who charge BDT 500 to run manual database queries at the office [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": ["বায়োমেট্রিক সেশন", "চোখের আইরিশ স্ক্যান", "স্মার্ট কার্ড বিতরণ", "এসএমএস নোটিফিকেশন"],
+    "key_terms_english": ["biometric session", "iris scan", "smart card delivery", "SMS notification"],
+    "confidence_level": "high",
+    "source_urls": ["https://services.nidw.gov.bd"],
+    "flags": ["VERIFY_2026", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "nid_rejection_afis_duplication_recovery",
+    "chunk_type": "rejection_analysis",
+    "section_header": "SECTION 7: REJECTION REASONS & EXACT FIXES",
+    "intent_tags": ["afis_duplication", "double_registration", "central_appeal", "hearing_process"],
+    "content": "### Recovery Profile: AFIS Biometric Duplication Collisions\n\n- **Root Cause**: The Automated Fingerprint Identification System (AFIS) detects matching fingerprint templates, indicating the citizen registered previously under a different address or spelling and forgot.\n- **Detection Stage**: Central Database Processing (post-biometric upload at Agargaon HQ).\n- **Exact Step-by-Step Fix**: \n  1. File a formal written appeal addressed to the Director General of the NID Wing requesting the deletion of the duplicate registration.\n  2. Attach the original NID slip, current physical address proof, and a copy of the active birth certificate.\n  3. Attend an in-person verification hearing at the Agargaon Election Commission Secretariat to prove identity and confirm which profile to retain.\n  4. Obtain a written \"Double Registration De-duplication Certificate\" from the central authority [FLAG: NEEDS_SOURCE].\n  5. Submit this certificate to the local Thana officer to clear the system lock.\n- **Timeline**: 45 to 90 working days.\n- **Cost**: Government fee of BDT 0 for deletion, but parallel broker speed fees can reach BDT 5,000–10,000 to speed up central file movement [FLAG: PRACTICE_VS_POLICY].\n- **Salvageability**: 100% salvageable but requires central intervention.",
+    "key_terms_bengali": ["ফিঙ্গারপ্রিন্ট ওভারল্যাপ", "দ্বৈত ভোটার", "শুনানি প্রক্রিয়া", "ডি-ডুপ্লিকেশন"],
+    "key_terms_english": ["fingerprint overlap", "double registration", "hearing process", "de-duplication"],
+    "confidence_level": "high",
+    "source_urls": ["https://services.nidw.gov.bd"],
+    "flags": ["NEEDS_SOURCE", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "nid_rejection_mismatches_name_variations",
+    "chunk_type": "rejection_analysis",
+    "section_header": "SECTION 7: REJECTION REASONS & EXACT FIXES",
+    "intent_tags": ["board_mismatch", "parent_name_spelling", "category_kha", "category_ga"],
+    "content": "### Recovery Profiles: Educational Mismatches and Name Variations\n\n**Board Verification Mismatch Profile:**\n- **Root Cause**: Typing differences between the online BDRIS birth record and the Secondary School Certificate (SSC) cause the verification API to lock up.\n- **Detection Stage**: Initial online submission or desk officer scrutiny.\n- **Step-by-Step Fix**: Correct the certificate at the respective Education Board first; download the digital transcript with a QR code; file a Category Ga correction online; upload the verified board document and updated BDRIS registry.\n- **Timeline & Cost**: 30 to 60 working days; BDT 345 fee + Board fees.\n\n**Parent-Name Spelling Variation Profile:**\n- **Root Cause**: Parent's name spelling varies between the applicant's certificate and the parent's actual NID (e.g., \"Md.\" vs \"Mohammad\") [FLAG: VERIFY_2026].\n- **Detection Stage**: Local Desk Verification.\n- **Step-by-Step Fix**: Obtain a Parent Name Clarification Certificate from the local Union Parishad Chairman; file a Category Kha correction; upload photocopies of the parent's NID, birth certificate, and siblings' NIDs to establish family lineage spelling consistency.\n- **Timeline & Cost**: 15 to 30 working days; BDT 230 fee.\n- **Salvageability**: High.",
+    "key_terms_bengali": ["বোর্ড সার্টিফিকেট অমিল", "পিতার নাম সংশোধন", "ধরণ খ সংশোধন", "ধরণ গ সংশোধন"],
+    "key_terms_english": ["board certificate mismatch", "father name correction", "category kha correction", "category ga correction"],
+    "confidence_level": "high",
+    "source_urls": ["https://services.nidw.gov.bd"],
+    "flags": ["VERIFY_2026"]
+  },
+  {
+    "chunk_id": "nid_timelines_advertised_vs_ground_truth",
+    "chunk_type": "timeline_analysis",
+    "section_header": "SECTION 8: REALISTIC TIMELINES",
+    "intent_tags": ["service_sla", "field_delay", "file_stagnation", "speed_fees"],
+    "content": "### Realistic Timelines: Advertised SLAs vs. Field Realities\n\nThe Election Commission advertises optimistic Service Level Agreements (SLAs) for different service types: Category Ka (15 working days), Category Kha (30 working days), Category Ga (45 working days), Category Gha (60 working days), and lost reprints (7 to 20 days depending on normal or urgent payments) [FLAG: VERIFY_2026]. \n\nHowever, these official SLAs are almost never met in practice. Ground-truth processing times are heavily extended due to localized backlog bottlenecks, server latency, and the deliberate slowing of files by desk staff. Category Ka corrections regularly take 30 to 60 days. Category Kha and Ga applications routinely stretch to 90 to 180 working days due to the slow manual transfer of physical verification files between districts. Category Gha (complex cases) can languish indefinitely—often for 6 to 12 months—unless the applicant pays unofficial \"speed fees\" ranging from BDT 2,000 to BDT 5,000 to local office assistants to physically move their file to the examiner's desk [FLAG: PRACTICE_VS_POLICY].",
+    "key_terms_bengali": ["সেবা প্রদানের সময়সীমা", "ফাইল স্থবিরতা", "অনিয়মিত বিলম্ব", "স্পিড মানি"],
+    "key_terms_english": ["service SLA", "file stagnation", "irregular delay", "speed money"],
+    "confidence_level": "high",
+    "source_urls": ["https://services.nidw.gov.bd"],
+    "flags": ["VERIFY_2026", "PRACTICE_VS_POLICY"]
+  },
+  {
+    "chunk_id": "nid_timelines_gazipur_backlog_a4_slips",
+    "chunk_type": "timeline_analysis",
+    "section_header": "SECTION 8: REALISTIC TIMELINES",
+    "intent_tags": ["gazipur_printing", "smart_card_backlog", "a4_nid_slip", "third_party_disputes"],
+    "content": "### The Gazipur Printing Backlog and Temporary A4 NID Slip Disputes\n\nA massive logistical bottleneck plagues the physical distribution of Smart Cards. The central printing facility at Gazipur, managed by the EC, suffers from a chronic printing backlog of nearly 40 million cards [FLAG: PRACTICE_VS_POLICY]. This delay is driven by French manufacturer delivery shortfalls of blank microchip cards, mechanical breakdowns of specialized high-speed printers, and a lack of imported dye-sublimation ink ribbons.\n\nAs a direct consequence, millions of citizens are left with nothing but temporary, downloaded A4-sized paper NID slips or laminated black-and-white printouts. While the EC has issued multiple gazettes declaring these temporary paper slips legally equivalent to physical Smart Cards, third-party entities routinely dispute them. Commercial banks, mobile operators (for SIM card registration), land registry offices, and the Passport Department frequently reject these paper slips, suspecting digital forgery [FLAG: PRACTICE_VS_POLICY]. This leaves citizens functionally stranded, unable to open bank accounts, register properties, or obtain passports despite having a legally valid NID.",
+    "key_terms_bengali": ["গাজীপুর প্রিন্টিং ফ্যাক্টরি", "স্মার্ট কার্ড ঘাটতি", "অস্থায়ী এনআইডি স্লিপ", "ব্যাংক প্রত্যাখ্যান"],
+    "key_terms_english": ["Gazipur printing factory", "smart card shortage", "temporary NID slip", "bank rejection"],
+    "confidence_level": "high",
+    "source_urls": ["https://services.nidw.gov.bd"],
+    "flags": ["PRACTICE_VS_POLICY"]
+  }
+]
